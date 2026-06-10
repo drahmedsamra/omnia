@@ -34,7 +34,7 @@ export default function About() {
 
             <div className="relative overflow-hidden rounded-[32px] border border-red-900/30 bg-zinc-950 shadow-[0_0_60px_rgba(220,38,38,0.08)]">
               <Image
-                src="/images/about/about.webp"
+                src="/images/about/about1.webp"
                 alt="أمنية أحمد سمرة"
                 width={700}
                 height={500}
