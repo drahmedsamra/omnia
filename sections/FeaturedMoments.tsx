@@ -85,10 +85,7 @@ export default function FeaturedMoments() {
   };
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      nextSlide();
-    }, 5000);
-
+    const timer = setInterval(nextSlide, 5000);
     return () => clearInterval(timer);
   }, []);
 
@@ -125,7 +122,9 @@ export default function FeaturedMoments() {
               src={slides[currentSlide].image}
               alt={slides[currentSlide].title}
               fill
-              priority
+              priority={currentSlide === 0}
+              quality={80}
+              sizes="(max-width:768px) 100vw, 1200px"
               className="object-contain"
             />
 
@@ -165,6 +164,7 @@ export default function FeaturedMoments() {
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
+                aria-label={`slide-${index + 1}`}
                 className={`h-3 rounded-full transition ${
                   currentSlide === index
                     ? "w-8 bg-red-500"
@@ -191,6 +191,9 @@ export default function FeaturedMoments() {
                   src={slide.image}
                   alt={slide.title}
                   fill
+                  loading="lazy"
+                  quality={60}
+                  sizes="120px"
                   className="object-cover"
                 />
               </button>

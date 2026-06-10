@@ -1,26 +1,30 @@
 import Image from "next/image";
 
 const featuredImages = [
-  "/images/gallery/gallery-1.jpg",
-  "/images/gallery/gallery-2.jpg",
-  "/images/gallery/gallery-3.jpg",
+  "/images/gallery/gallery-1.webp",
+  "/images/gallery/gallery-2.webp",
+  "/images/gallery/gallery-3.webp",
 ];
 
 const galleryImages = [
-  "/images/gallery/gallery-4.jpg",
-  "/images/gallery/gallery-5.jpg",
-  "/images/gallery/gallery-6.jpg",
-  "/images/gallery/gallery-7.jpg",
-  "/images/gallery/gallery-8.jpg",
+  "/images/gallery/gallery-4.webp",
+  "/images/gallery/gallery-5.webp",
+  "/images/gallery/gallery-6.webp",
+  "/images/gallery/gallery-7.webp",
+  "/images/gallery/gallery-8.webp",
 ];
 
 export default function Gallery() {
   return (
-    <section className="bg-black py-24 text-white">
+    <section
+      id="gallery"
+      className="bg-black py-24 text-white"
+    >
       <div className="mx-auto max-w-7xl px-6">
 
         {/* Header */}
         <div className="mb-16 text-center">
+
           <p className="text-sm tracking-[0.35em] text-red-500">
             PHOTO GALLERY
           </p>
@@ -32,6 +36,7 @@ export default function Gallery() {
           <p className="mx-auto mt-6 max-w-2xl text-gray-400">
             أبرز البطولات والإنجازات والمشاركات مع النادي الأهلي ومنتخب مصر.
           </p>
+
         </div>
 
         {/* Featured Images */}
@@ -44,15 +49,19 @@ export default function Gallery() {
             >
               <Image
                 src={image}
-                alt=""
+                alt={`صورة ${index + 1}`}
                 width={1000}
                 height={1200}
+                priority
+                quality={80}
+                sizes="(max-width:768px) 100vw, 33vw"
                 className="h-[520px] w-full object-cover transition duration-700 group-hover:scale-110"
               />
 
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
 
               <div className="absolute bottom-0 right-0 p-6">
+
                 <div className="text-sm tracking-widest text-red-500">
                   HIGHLIGHT
                 </div>
@@ -62,6 +71,7 @@ export default function Gallery() {
                   {index === 1 && "منتخب مصر"}
                   {index === 2 && "النادي الأهلي"}
                 </h3>
+
               </div>
             </div>
           ))}
@@ -78,9 +88,12 @@ export default function Gallery() {
             >
               <Image
                 src={image}
-                alt=""
+                alt={`معرض الصور ${index + 1}`}
                 width={800}
                 height={1000}
+                loading="lazy"
+                quality={75}
+                sizes="(max-width:768px) 50vw, (max-width:1024px) 33vw, 20vw"
                 className="aspect-[3/4] w-full object-cover transition duration-500 group-hover:scale-105"
               />
             </div>

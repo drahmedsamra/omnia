@@ -133,8 +133,8 @@ export default function Hero() {
             <Image
               src="/images/hero/omnia-cutout.webp"
               alt="أمنية أحمد سمرة"
-              width={900}
-              height={1200}
+              width={700}
+              height={1000}
               priority
               sizes="(max-width:768px) 90vw, 45vw"
               className="relative z-10 max-h-[720px] w-auto object-contain drop-shadow-[0_0_100px_rgba(220,38,38,0.35)]"
