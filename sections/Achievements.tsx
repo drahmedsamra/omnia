@@ -24,9 +24,9 @@ export default function Achievements() {
     },
     {
       icon: "ahly",
-      number: "",
-      title: "النادي الأهلي",
-      description: "لاعبة النادي الأهلي",
+      number: "1",
+      title: "الدوري المصري",
+      description: "مع النادي الأهلي",
     },
 
   ];
