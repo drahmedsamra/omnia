@@ -32,13 +32,20 @@ export default function About() {
 
             <div className="absolute h-[400px] w-[400px] rounded-full bg-red-600/20 blur-[130px]" />
 
-            <div className="relative overflow-hidden rounded-[32px] border border-red-900/30 bg-zinc-950 shadow-[0_0_60px_rgba(220,38,38,0.08)]">
+            <div className="relative">
               <Image
                 src="/images/about/about1.webp"
                 alt="أمنية أحمد سمرة"
                 width={700}
-                height={500}
-                className="h-auto w-full object-cover"
+                height={900}
+                priority
+                className="
+                  h-auto
+                  w-full
+                  max-w-[500px]
+                  object-contain
+                  drop-shadow-[0_0_60px_rgba(220,38,38,0.25)]
+                "
               />
             </div>
 
