@@ -27,25 +27,30 @@ export default function Achievements() {
   ];
 
   return (
-    <section className="relative py-32 bg-black overflow-hidden">
+    <section
+      id="achievements"
+      className="relative overflow-hidden bg-black py-32"
+    >
       <div className="absolute inset-0 bg-gradient-to-b from-black via-red-950/5 to-black" />
 
       <div className="relative mx-auto max-w-7xl px-6">
 
         {/* Header */}
-        <div className="text-center mb-20">
+        <div className="mb-20 text-center">
 
-          <span className="text-red-500 text-sm font-semibold tracking-[0.25em] uppercase">
+          <span className="text-sm font-semibold uppercase tracking-[0.3em] text-red-500">
             ACHIEVEMENTS
           </span>
 
-          <h2 className="mt-4 text-5xl md:text-7xl font-black text-white">
+          <h2 className="mt-4 text-5xl font-black text-white md:text-7xl">
             الإنجازات
           </h2>
 
-          <p className="mt-6 max-w-3xl mx-auto text-gray-400 text-lg leading-8">
-            أبرز الإنجازات والمحطات المهمة في رحلة أمنية سمرة داخل الملاعب المصرية.
+          <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-gray-400">
+            أبرز الإنجازات والمحطات المهمة في رحلة أمنية أحمد سمرة داخل الملاعب المصرية.
           </p>
+
+          <div className="mx-auto mt-8 h-px w-40 bg-gradient-to-r from-transparent via-red-500/40 to-transparent" />
 
         </div>
 
@@ -71,11 +76,11 @@ export default function Achievements() {
                 hover:bg-white/[0.05]
               "
             >
-              <div className="text-5xl mb-6">
+              <div className="mb-6 text-5xl transition-transform duration-300 group-hover:scale-110">
                 {item.icon}
               </div>
 
-              <div className="text-5xl md:text-6xl font-black text-red-500">
+              <div className="text-5xl font-black text-red-500 md:text-6xl">
                 {item.number}
               </div>
 
@@ -83,7 +88,7 @@ export default function Achievements() {
                 {item.title}
               </h3>
 
-              <p className="mt-3 text-gray-400 leading-7">
+              <p className="mt-3 leading-7 text-gray-400">
                 {item.description}
               </p>
             </div>

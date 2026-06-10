@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Cairo } from "next/font/google";
+import Navbar from "@/components/Navbar";
 import "./globals.css";
 
 const cairo = Cairo({
@@ -12,14 +13,15 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://omnia.ahmedsamra.com"),
 
   title: {
-    default: "أمنية سمرة | لاعبة منتخب مصر للتنس",
-    template: "%s | أمنية سمرة",
+    default: "أمنية أحمد سمرة | لاعبة منتخب مصر للتنس",
+    template: "%s | أمنية أحمد سمرة",
   },
 
   description:
-    "الموقع الرسمي لأمنية سمرة، لاعبة منتخب مصر للتنس ولاعبة النادي الأهلي. أخبار البطولات والإنجازات والصور وأحدث المشاركات المحلية والدولية.",
+    "الموقع الرسمي لأمنية أحمد سمرة، لاعبة منتخب مصر للتنس ولاعبة النادي الأهلي. أخبار البطولات والإنجازات والصور وأحدث المشاركات المحلية والدولية.",
 
   keywords: [
+    "أمنية أحمد سمرة",
     "أمنية سمرة",
     "Omnia Samra",
     "منتخب مصر للتنس",
@@ -40,9 +42,9 @@ export const metadata: Metadata = {
   creator: "Ahmed Samra",
 
   openGraph: {
-    title: "أمنية سمرة | لاعبة منتخب مصر للتنس",
+    title: "أمنية أحمد سمرة | لاعبة منتخب مصر للتنس",
     description:
-      "الموقع الرسمي لأمنية سمرة لاعبة منتخب مصر للتنس ولاعبة النادي الأهلي.",
+      "الموقع الرسمي لأمنية أحمد سمرة لاعبة منتخب مصر للتنس ولاعبة النادي الأهلي.",
     url: "https://omnia.ahmedsamra.com",
     siteName: "Omnia Samra",
     locale: "ar_EG",
@@ -53,16 +55,16 @@ export const metadata: Metadata = {
         url: "/og-image.webp",
         width: 1200,
         height: 630,
-        alt: "أمنية سمرة | لاعبة منتخب مصر للتنس",
+        alt: "أمنية أحمد سمرة | لاعبة منتخب مصر للتنس",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "أمنية سمرة | لاعبة منتخب مصر للتنس",
+    title: "أمنية أحمد سمرة | لاعبة منتخب مصر للتنس",
     description:
-      "الموقع الرسمي لأمنية سمرة لاعبة منتخب مصر للتنس ولاعبة النادي الأهلي.",
+      "الموقع الرسمي لأمنية أحمد سمرة لاعبة منتخب مصر للتنس ولاعبة النادي الأهلي.",
     images: ["/og-image.webp"],
   },
 
@@ -94,6 +96,7 @@ export default function RootLayout({
       <body
         className={`${cairo.className} min-h-full flex flex-col bg-black text-white`}
       >
+        <Navbar />
         {children}
       </body>
     </html>

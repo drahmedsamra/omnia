@@ -21,7 +21,7 @@ const slides = [
   },
   {
     image: "/images/gallery/gallery-4.webp",
-    title: "منتخب الأهلي",
+    title: "منتخب مصر",
     description: "رحلة المنافسة والإنجاز.",
   },
   {
@@ -71,7 +71,7 @@ const slides = [
   },
 ];
 
-export default function GallerySection() {
+export default function FeaturedMoments() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const nextSlide = () => {
@@ -93,27 +93,33 @@ export default function GallerySection() {
   }, []);
 
   return (
-    <section className="relative py-32 bg-black overflow-hidden">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 h-[400px] w-[400px] bg-red-900/10 blur-[150px]" />
+    <section
+      id="gallery"
+      className="relative overflow-hidden bg-black py-32"
+    >
+      <div className="absolute left-1/2 top-0 h-[400px] w-[400px] -translate-x-1/2 bg-red-900/10 blur-[150px]" />
 
       <div className="mx-auto max-w-7xl px-6">
-        <div className="text-center mb-16">
-          <span className="text-red-500 uppercase tracking-[0.4em] text-sm">
-            Featured Moments
+
+        <div className="mb-16 text-center">
+
+          <span className="text-sm uppercase tracking-[0.4em] text-red-500">
+            FEATURED MOMENTS
           </span>
 
           <h2 className="mt-4 text-5xl font-black text-white">
             أبرز اللحظات
           </h2>
 
-          <p className="mt-6 text-gray-400 max-w-2xl mx-auto">
-            أهم البطولات والإنجازات في مسيرة أمنية.
+          <p className="mx-auto mt-6 max-w-2xl text-gray-400">
+            مجموعة من أهم البطولات والإنجازات في مسيرة أمنية أحمد سمرة.
           </p>
+
         </div>
 
-        {/* Slider */}
-        <div className="relative max-w-6xl mx-auto">
-          <div className="relative h-[420px] md:h-[650px] bg-zinc-950 rounded-3xl overflow-hidden border border-red-900/30">
+        <div className="relative mx-auto max-w-6xl">
+
+          <div className="relative h-[420px] overflow-hidden rounded-3xl border border-red-900/30 bg-zinc-950 md:h-[650px]">
 
             <Image
               src={slides[currentSlide].image}
@@ -123,61 +129,61 @@ export default function GallerySection() {
               className="object-contain"
             />
 
-            {/* Overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
 
-            {/* Content */}
             <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
-              <h3 className="text-2xl md:text-5xl font-black text-white">
+
+              <h3 className="text-2xl font-black text-white md:text-5xl">
                 {slides[currentSlide].title}
               </h3>
 
-              <p className="mt-3 text-gray-300 text-sm md:text-lg">
+              <p className="mt-3 text-sm text-gray-300 md:text-lg">
                 {slides[currentSlide].description}
               </p>
+
             </div>
 
-            {/* Left */}
             <button
               onClick={prevSlide}
-              className="absolute left-4 top-1/2 -translate-y-1/2 z-20 text-5xl text-white/60 hover:text-white transition"
+              className="absolute left-4 top-1/2 z-20 -translate-y-1/2 text-5xl text-white/60 transition hover:text-white"
             >
               ❮
             </button>
 
-            {/* Right */}
             <button
               onClick={nextSlide}
-              className="absolute right-4 top-1/2 -translate-y-1/2 z-20 text-5xl text-white/60 hover:text-white transition"
+              className="absolute right-4 top-1/2 z-20 -translate-y-1/2 text-5xl text-white/60 transition hover:text-white"
             >
               ❯
             </button>
+
           </div>
 
-          {/* Dots */}
-          <div className="flex justify-center gap-3 mt-8">
+          <div className="mt-8 flex justify-center gap-3">
+
             {slides.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
-                className={`h-3 w-3 rounded-full transition ${
+                className={`h-3 rounded-full transition ${
                   currentSlide === index
-                    ? "bg-red-500 w-8"
-                    : "bg-zinc-700"
+                    ? "w-8 bg-red-500"
+                    : "w-3 bg-zinc-700"
                 }`}
               />
             ))}
+
           </div>
 
-          {/* Thumbnails */}
-          <div className="hidden md:grid grid-cols-6 gap-4 mt-10">
+          <div className="mt-10 hidden grid-cols-6 gap-4 md:grid">
+
             {slides.map((slide, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
-                className={`relative h-24 rounded-xl overflow-hidden border transition ${
+                className={`relative h-24 overflow-hidden rounded-xl border transition ${
                   currentSlide === index
-                    ? "border-red-500 scale-105"
+                    ? "scale-105 border-red-500"
                     : "border-zinc-800"
                 }`}
               >
@@ -189,8 +195,11 @@ export default function GallerySection() {
                 />
               </button>
             ))}
+
           </div>
+
         </div>
+
       </div>
     </section>
   );

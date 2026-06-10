@@ -2,7 +2,10 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <section className="relative overflow-hidden bg-black py-32">
+    <section
+      id="about"
+      className="relative overflow-hidden bg-black py-32"
+    >
       {/* Background Glow */}
       <div className="absolute left-1/2 top-20 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-red-900/10 blur-[150px]" />
 
@@ -10,13 +13,15 @@ export default function About() {
 
         {/* Heading */}
         <div className="mb-20 text-center">
+
           <span className="text-sm font-semibold uppercase tracking-[0.35em] text-red-500">
             ABOUT OMNIA
           </span>
 
           <h2 className="mt-5 text-5xl font-black text-white md:text-7xl">
-            نبذة عن أمنية
+            نبذة عن أمنية أحمد سمرة
           </h2>
+
         </div>
 
         {/* Content */}
@@ -25,17 +30,18 @@ export default function About() {
           {/* Image */}
           <div className="relative flex justify-center">
 
-            <div className="absolute h-[350px] w-[350px] rounded-full bg-red-600/20 blur-[120px]" />
+            <div className="absolute h-[400px] w-[400px] rounded-full bg-red-600/20 blur-[130px]" />
 
-            <div className="relative overflow-hidden rounded-[32px] border border-red-900/30 bg-zinc-950">
+            <div className="relative overflow-hidden rounded-[32px] border border-red-900/30 bg-zinc-950 shadow-[0_0_60px_rgba(220,38,38,0.08)]">
               <Image
                 src="/images/about/about.webp"
-                alt="أمنية سمرة"
+                alt="أمنية أحمد سمرة"
                 width={700}
-                height={300}
-                className="h-auto w-full object-contain"
+                height={500}
+                className="h-auto w-full object-cover"
               />
             </div>
+
           </div>
 
           {/* Text */}
@@ -46,22 +52,28 @@ export default function About() {
             </h3>
 
             <p className="mt-8 text-lg leading-9 text-gray-400 md:text-xl">
-              أمنية سمرة لاعبة تنس مصرية تمثل النادي الأهلي ومنتخب مصر،
-              استطاعت خلال سنوات قليلة أن تحقق العديد من الإنجازات
-              والبطولات المحلية في منافسات الفردي والزوجي.
+              أمنية أحمد سمرة لاعبة منتخب مصر للتنس ولاعبة النادي الأهلي،
+              استطاعت خلال سنوات قليلة أن تحقق العديد من البطولات والإنجازات
+              في منافسات الفردي والزوجي على مستوى الجمهورية.
             </p>
 
             <p className="mt-8 text-lg leading-9 text-gray-400 md:text-xl">
-              تواصل تطوير مستواها الفني من خلال المشاركة المستمرة في
-              البطولات المحلية والإقليمية، وتسعى إلى تمثيل مصر في أكبر
-              البطولات الدولية خلال السنوات القادمة.
+              تواصل تطوير مستواها الفني من خلال المشاركة المستمرة في البطولات
+              المحلية والإقليمية، وتسعى إلى تمثيل مصر في أكبر البطولات الدولية
+              وتحقيق المزيد من النجاحات خلال السنوات القادمة.
             </p>
 
             {/* Quote */}
-            <div className="mt-10 border-r-4 border-red-500 pr-6">
-              <p className="text-xl font-semibold italic text-white">
-                "الحلم الكبير يبدأ بخطوة صغيرة داخل الملعب."
+            <div className="mt-12 border-r-4 border-red-500 pr-6">
+
+              <p className="text-xl font-semibold italic text-white md:text-2xl">
+                "كل بطولة هي خطوة جديدة نحو حلم أكبر."
               </p>
+
+              <p className="mt-3 text-sm text-gray-500">
+                Omnia Ahmed Samra
+              </p>
+
             </div>
 
           </div>
