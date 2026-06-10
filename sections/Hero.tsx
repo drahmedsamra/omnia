@@ -19,7 +19,7 @@ export default function Hero() {
 
           {/* Badge */}
           <div className="mb-8 inline-flex items-center rounded-full border border-red-800/40 bg-red-950/20 px-6 py-3 text-sm font-medium text-red-400 backdrop-blur">
-            منتخب مصر للتنس • النادي الأهلي
+          🎾 منتخب مصر للتنس • النادي الأهلي
           </div>
 
           {/* Title */}
@@ -37,10 +37,7 @@ export default function Hero() {
 
           {/* Description */}
           <p className="mx-auto mt-8 max-w-2xl text-lg leading-9 text-gray-400 lg:mx-0">
-            لاعبة منتخب مصر للتنس ولاعبة النادي الأهلي، حققت العديد من بطولات
-            الجمهورية في منافسات الفردي والزوجي، وتمثل مصر في البطولات المحلية
-            والإقليمية وتسعى للوصول إلى أعلى المستويات الدولية في رياضة التنس.
-          </p>
+          لاعبة منتخب مصر للتنس ولاعبة النادي الأهلي، حققت العديد من بطولات الجمهورية في منافسات الفردي والزوجي، وحققت درع الدوري مع النادي الأهلي تمثل مصر في البطولات المحلية والإقليمية وتسعى للوصول إلى أعلى المستويات الدولية.          </p>
 
           {/* Buttons */}
           <div className="mt-10 flex flex-wrap justify-center gap-4 lg:justify-start">
@@ -140,7 +137,7 @@ export default function Hero() {
               height={1200}
               priority
               sizes="(max-width:768px) 90vw, 45vw"
-              className="relative z-10 max-h-[820px] w-auto object-contain drop-shadow-[0_0_100px_rgba(220,38,38,0.35)]"
+              className="relative z-10 max-h-[720px] w-auto object-contain drop-shadow-[0_0_100px_rgba(220,38,38,0.35)]"
             />
 
           </div>
