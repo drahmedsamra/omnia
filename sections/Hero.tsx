@@ -19,16 +19,17 @@ export default function Hero() {
 
           {/* Badge */}
           <div className="mb-8 inline-flex items-center rounded-full border border-red-800/40 bg-red-950/20 px-6 py-3 text-sm font-medium text-red-400 backdrop-blur">
-            🎾 منتخب مصر للتنس • النادي الأهلي
+            منتخب مصر للتنس • النادي الأهلي
           </div>
 
           {/* Title */}
-          <h1 className="text-5xl font-black leading-[0.9] md:text-7xl lg:text-8xl">
-            أمنية
-            <br />
-            أحمد سمرة
-          </h1>
-          
+          <h1 className="text-5xl font-black md:text-7xl lg:text-8xl">
+  <span className="block">أمنية أحمد</span>
+  <span className="mt-4 block">سمرة</span>
+</h1>
+
+<div className="mt-6 h-1 w-32 rounded-full bg-red-500" />
+
           {/* Subtitle */}
           <h2 className="mt-6 text-2xl font-medium text-gray-300 md:text-4xl">
             لاعبة منتخب مصر للتنس والنادي الأهلي
@@ -64,39 +65,67 @@ export default function Hero() {
           <div className="mt-14 h-px w-full max-w-xl bg-gradient-to-l from-transparent via-red-900/40 to-transparent" />
 
           {/* Stats */}
-          <div className="mt-8 grid grid-cols-3 gap-4">
+<div className="mt-10 grid grid-cols-3 gap-5">
 
-            <div className="rounded-3xl border border-red-900/30 bg-white/[0.04] p-6 backdrop-blur-md transition hover:border-red-500/30 hover:bg-white/[0.06]">
-              <div className="text-4xl font-black text-red-500">
-                +30
-              </div>
-              <div className="mt-2 text-sm text-gray-400">
-                بطولة جمهورية
-              </div>
-            </div>
+{/* Championships */}
+<div className="group rounded-3xl border border-red-900/30 bg-white/[0.04] p-6 backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:border-red-500/40 hover:bg-white/[0.06]">
 
-            <div className="rounded-3xl border border-red-900/30 bg-white/[0.04] p-6 backdrop-blur-md transition hover:border-red-500/30 hover:bg-white/[0.06]">
-              <div className="text-4xl">
-                🇪🇬
-              </div>
-              <div className="mt-2 text-sm text-gray-400">
-                منتخب مصر للتنس
-              </div>
-            </div>
+  <div className="flex flex-col items-center justify-center text-center">
 
-            <div className="rounded-3xl border border-red-900/30 bg-white/[0.04] p-6 backdrop-blur-md transition hover:border-red-500/30 hover:bg-white/[0.06]">
-              <div className="text-4xl">
-                🔴
-              </div>
-              <div className="mt-2 text-sm text-gray-400">
-                النادي الأهلي
-              </div>
-            </div>
+    <div className="text-5xl font-black text-red-500">
+      +30
+    </div>
 
-          </div>
+    <div className="mt-4 text-base font-semibold text-white">
+      بطولة جمهورية
+    </div>
 
-        </div>
+  </div>
 
+</div>
+
+{/* Egypt */}
+<div className="group rounded-3xl border border-red-900/30 bg-white/[0.04] p-6 backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:border-red-500/40 hover:bg-white/[0.06]">
+
+  <div className="flex flex-col items-center justify-center text-center">
+
+    <div className="flex h-16 w-16 items-center justify-center rounded-full border border-red-500/20 bg-white/5">
+      <span className="text-3xl">🇪🇬</span>
+    </div>
+
+    <div className="mt-4 text-base font-semibold text-white">
+      منتخب مصر للتنس
+    </div>
+
+  </div>
+
+</div>
+
+{/* Al Ahly */}
+<div className="group rounded-3xl border border-red-900/30 bg-white/[0.04] p-6 backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:border-red-500/40 hover:bg-white/[0.06]">
+
+  <div className="flex flex-col items-center justify-center text-center">
+
+    <div className="flex h-16 w-16 items-center justify-center rounded-full border border-red-500/20 bg-white/5">
+      <Image
+        src="/images/logos/ahly-logo.webp"
+        alt="النادي الأهلي"
+        width={42}
+        height={42}
+        className="object-contain"
+      />
+    </div>
+
+    <div className="mt-4 text-base font-semibold text-white">
+      النادي الأهلي
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+</div>
         {/* Player Image */}
         <div className="flex flex-1 justify-center">
 

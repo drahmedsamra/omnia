@@ -1,11 +1,21 @@
+import Image from "next/image";
+
 export default function Achievements() {
   const achievements = [
     {
       icon: "🏆",
-      number: "+30",
-      title: "بطولة جمهورية",
-      description: "في منافسات الفردي والزوجي",
+      number: "+20",
+      title: "مراكز أولي",
+      description: "في منافسات الجمهوريه الفردي",
     },
+
+    {
+      icon: "🥇",
+      number: "+20",
+      title: "مراكز أولى",
+      description: "في منافسات الجمهوريه الزوجي",
+    },
+
     {
       icon: "🇪🇬",
       number: "U12",
@@ -13,17 +23,12 @@ export default function Achievements() {
       description: "تمثيل مصر في البطولات",
     },
     {
-      icon: "🔴",
-      number: "الأهلي",
-      title: "النادي الحالي",
+      icon: "ahly",
+      number: "",
+      title: "النادي الأهلي",
       description: "لاعبة النادي الأهلي",
     },
-    {
-      icon: "🥇",
-      number: "+10",
-      title: "مراكز أولى",
-      description: "في بطولات محلية وإقليمية",
-    },
+
   ];
 
   return (
@@ -34,10 +39,8 @@ export default function Achievements() {
       <div className="absolute inset-0 bg-gradient-to-b from-black via-red-950/5 to-black" />
 
       <div className="relative mx-auto max-w-7xl px-6">
-
         {/* Header */}
         <div className="mb-20 text-center">
-
           <span className="text-sm font-semibold uppercase tracking-[0.3em] text-red-500">
             ACHIEVEMENTS
           </span>
@@ -47,16 +50,15 @@ export default function Achievements() {
           </h2>
 
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-gray-400">
-            أبرز الإنجازات والمحطات المهمة في رحلة أمنية أحمد سمرة داخل الملاعب المصرية.
+            أبرز الإنجازات والمحطات المهمة في رحلة أمنية أحمد سمرة داخل الملاعب
+            المصرية.
           </p>
 
           <div className="mx-auto mt-8 h-px w-40 bg-gradient-to-r from-transparent via-red-500/40 to-transparent" />
-
         </div>
 
         {/* Cards */}
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-
+        <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
           {achievements.map((item, index) => (
             <div
               key={index}
@@ -66,7 +68,7 @@ export default function Achievements() {
                 border
                 border-red-900/20
                 bg-white/[0.03]
-                p-8
+                p-6
                 text-center
                 backdrop-blur-md
                 transition-all
@@ -76,24 +78,41 @@ export default function Achievements() {
                 hover:bg-white/[0.05]
               "
             >
-              <div className="mb-6 text-5xl transition-transform duration-300 group-hover:scale-110">
-                {item.icon}
+              <div className="mb-5 flex justify-center transition-transform duration-300 group-hover:scale-110">
+                {item.icon === "ahly" ? (
+                  <Image
+                    src="/images/logos/ahly-logo.webp"
+                    alt="النادي الأهلي"
+                    width={60}
+                    height={60}
+                    className="object-contain"
+                  />
+                ) : (
+                  <span className="text-5xl">{item.icon}</span>
+                )}
               </div>
 
-              <div className="text-5xl font-black text-red-500 md:text-6xl">
-                {item.number}
-              </div>
+              {item.number && (
+                <div className="text-4xl font-black text-red-500 md:text-5xl">
+                  {item.number}
+                </div>
+              )}
 
-              <h3 className="mt-5 text-2xl font-bold text-white">
+              <h3
+                className={`font-bold text-white ${
+                  item.number
+                    ? "mt-4 text-xl md:text-2xl"
+                    : "text-xl md:text-2xl"
+                }`}
+              >
                 {item.title}
               </h3>
 
-              <p className="mt-3 leading-7 text-gray-400">
+              <p className="mt-3 text-sm leading-6 text-gray-400 md:text-base">
                 {item.description}
               </p>
             </div>
           ))}
-
         </div>
       </div>
     </section>
