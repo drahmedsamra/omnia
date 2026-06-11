@@ -34,7 +34,7 @@ export default function About() {
 
             <div className="relative">
               <Image
-                src="/images/about/about1.webp"
+                src="/images/about/about2.webp"
                 alt="أمنية أحمد سمرة"
                 width={700}
                 height={900}
