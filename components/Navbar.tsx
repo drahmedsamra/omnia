@@ -10,6 +10,7 @@ export default function Navbar() {
     { name: "نبذة", href: "#about" },
     { name: "الإنجازات", href: "#achievements" },
     { name: "الصور", href: "#gallery" },
+    { name: "المسيرة", href: "#timeline" },
   ];
 
   return (

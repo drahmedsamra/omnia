@@ -3,6 +3,7 @@ import About from "@/sections/About";
 import Achievements from "@/sections/Achievements";
 import FeaturedMoments from "@/sections/FeaturedMoments";
 import Footer from "@/sections/Footer";
+import Timeline from "@/sections/Timeline";
 
 export default function Home() {
   return (
@@ -11,11 +12,15 @@ export default function Home() {
 
       <About />
 
+      <Timeline />
+
       <Achievements />
 
       <FeaturedMoments />
 
       <Footer />
+
+
     </main>
   );
 }
