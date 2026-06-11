@@ -4,6 +4,7 @@ import Achievements from "@/sections/Achievements";
 import FeaturedMoments from "@/sections/FeaturedMoments";
 import Footer from "@/sections/Footer";
 import Timeline from "@/sections/Timeline";
+import Coach from "@/sections/Coach";
 
 export default function Home() {
   return (
@@ -15,6 +16,8 @@ export default function Home() {
       <Timeline />
 
       <Achievements />
+
+      <Coach />
 
       <FeaturedMoments />
 
