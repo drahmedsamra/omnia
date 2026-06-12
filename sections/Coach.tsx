@@ -44,12 +44,13 @@ export default function Coach() {
                 <div className="absolute inset-0 rounded-full bg-red-600/20 blur-3xl" />
 
                 <div className="relative h-[320px] w-[320px] overflow-hidden rounded-full border-4 border-red-500/30">
-                  <Image
-                    src="/images/coach/couch.webp"
-                    alt="Ahmed Samra"
-                    fill
-                    className="object-cover"
-                  />
+                <Image
+  src="/images/coach/ahmed-samra-itf-tennis-coach.webp"
+  alt="المهندس أحمد سمرة مدرب تنس معتمد من الاتحاد الدولي للتنس ITF ومدرب اللاعبة أمنية أحمد سمرة"
+  title="المهندس أحمد سمرة - مدرب تنس معتمد ITF"
+  fill
+  className="object-cover"
+/>
                 </div>
               </div>
 

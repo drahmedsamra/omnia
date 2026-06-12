@@ -5,69 +5,89 @@ import Image from "next/image";
 
 const slides = [
   {
-    image: "/images/gallery/gallery-1.webp",
+    image: "/images/gallery/omnia-ahmed-samra-tennis.webp",
     title: "بطولات الجمهورية",
     description: "لقطات من البطولات المحلية.",
+    alt: "أمنية أحمد سمرة خلال منافسات بطولة الجمهورية للتنس",
+    imageTitle: "أمنية أحمد سمرة - بطولة الجمهورية للتنس",
   },
   {
-    image: "/images/gallery/gallery-2.webp",
+    image: "/images/gallery/omnia-ahmed-samra-tennis-ahly-champion.webp",
     title: "كأس البطولة",
     description: "إحدى لحظات التتويج.",
+    alt: "أمنية أحمد سمرة أثناء التتويج بإحدى بطولات التنس",
+    imageTitle: "أمنية أحمد سمرة - كأس البطولة",
   },
   {
-    image: "/images/gallery/gallery-3.webp",
+    image: "/images/gallery/omnia-ahmed-samra-tennis-ahly-team.webp.webp",
     title: "فريق الأهلي",
     description: "مع فريق النادي الأهلي.",
+    alt: "أمنية أحمد سمرة مع فريق النادي الأهلي للتنس",
+    imageTitle: "أمنية أحمد سمرة - النادي الأهلي",
   },
   {
-    image: "/images/gallery/gallery-4.webp",
+    image: "/images/gallery/omnia-samra-tennis-friends.webp",
     title: "منتخب مصر",
     description: "رحلة المنافسة والإنجاز.",
+    alt: "أمنية أحمد سمرة لاعبة منتخب مصر للتنس",
+    imageTitle: "أمنية أحمد سمرة - منتخب مصر",
   },
   {
-    image: "/images/gallery/gallery-5.webp",
+    image: "/images/gallery/omnia-samra-with-tennis-coach.webp",
     title: "بطولات النادي",
     description: "مشاركات قوية داخل النادي.",
+    alt: "أمنية أحمد سمرة خلال إحدى بطولات النادي",
+    imageTitle: "أمنية أحمد سمرة - بطولات النادي",
   },
   {
-    image: "/images/gallery/gallery-6.webp",
+    image: "/images/gallery/omnia-samra-ahly-team-competitions.webp",
     title: "اللاعبات",
     description: "ذكريات جميلة مع الفريق.",
+    alt: "أمنية أحمد سمرة مع زميلاتها في فريق التنس",
+    imageTitle: "أمنية أحمد سمرة - فريق اللاعبات",
   },
   {
-    image: "/images/gallery/gallery-7.webp",
+    image: "/images/gallery/omnia-samra-tennis-1st-egypt.webp",
     title: "المركز الأول",
     description: "لحظة فخر وإنجاز.",
+    alt: "أمنية أحمد سمرة بعد تحقيق المركز الأول في بطولة تنس",
+    imageTitle: "أمنية أحمد سمرة - المركز الأول",
   },
   {
-    image: "/images/gallery/gallery-8.webp",
+    image: "/images/gallery/omnia-samra-double-tennis-1st.webp",
     title: "بطولات الزوجي",
     description: "منافسات قوية ومميزة.",
+    alt: "أمنية أحمد سمرة خلال منافسات الزوجي في بطولة تنس",
+    imageTitle: "أمنية أحمد سمرة - بطولات الزوجي",
   },
   {
-    image: "/images/gallery/gallery-9.webp",
+    image: "/images/gallery/omnia-ahmed-samra-after-winning-tennis-double-tournament.webp",
     title: "التتويج",
     description: "من أجمل لحظات الفوز.",
+    alt: "أمنية أحمد سمرة أثناء مراسم التتويج",
+    imageTitle: "أمنية أحمد سمرة - التتويج",
   },
   {
-    image: "/images/gallery/gallery-10.webp",
+    image: "/images/gallery/omnia-samra-with-tennis-partner-retal-saber.webp",
     title: "رحلة التنس",
     description: "ذكريات من الملاعب.",
+    alt: "أمنية أحمد سمرة وصديقتها ريتال صابر لاعبة الأهلي",
+    imageTitle: "أمنية أحمد سمرة - رحلة التنس",
   },
   {
-    image: "/images/gallery/gallery-11.webp",
+    image: "/images/gallery/omnia-samra-with-lyla-abdelrazek.webp",
     title: "منافسات قوية",
     description: "بطولات الجمهورية للتنس.",
+    alt: "أمنية أحمد سمرة مع صديقتها ليلي عبد الرازق لاعبة النادي الأهلي للتنس",
+    imageTitle: "أمنية أحمد سمرة - منافسات قوية",
   },
+
   {
-    image: "/images/gallery/gallery-12.webp",
-    title: "إنجاز جديد",
-    description: "استمرار النجاح والتطور.",
-  },
-  {
-    image: "/images/gallery/gallery-13.webp",
+    image: "/images/gallery/omnia-samra-1st-tennis-champion-egypt.webp",
     title: "بطلة مصر",
     description: "لقطة من إحدى البطولات.",
+    alt: "أمنية أحمد سمرة بطلة مصر في إحدى بطولات التنس",
+    imageTitle: "أمنية أحمد سمرة - بطلة مصر",
   },
 ];
 
@@ -118,15 +138,19 @@ export default function FeaturedMoments() {
 
           <div className="relative h-[420px] overflow-hidden rounded-3xl border border-red-900/30 bg-zinc-950 md:h-[650px]">
 
-            <Image
-              src={slides[currentSlide].image}
-              alt={slides[currentSlide].title}
-              fill
-              priority={currentSlide === 0}
-              quality={80}
-              sizes="(max-width:768px) 100vw, 1200px"
-              className="object-contain"
-            />
+
+
+<Image
+src={slides[currentSlide].image}
+alt={slides[currentSlide].alt}
+title={slides[currentSlide].imageTitle}
+fill
+priority={currentSlide === 0}
+quality={80}
+sizes="(max-width:768px) 100vw, 1200px"
+className="object-contain"
+/>
+
 
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
 
@@ -188,14 +212,15 @@ export default function FeaturedMoments() {
                 }`}
               >
                 <Image
-                  src={slide.image}
-                  alt={slide.title}
-                  fill
-                  loading="lazy"
-                  quality={60}
-                  sizes="120px"
-                  className="object-cover"
-                />
+  src={slide.image}
+  alt={slide.alt}
+  title={slide.imageTitle}
+  fill
+  loading="lazy"
+  quality={60}
+  sizes="120px"
+  className="object-cover"
+/>
               </button>
             ))}
 
