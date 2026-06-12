@@ -43,7 +43,7 @@ export default function Timeline() {
   return (
     <section
       id="timeline"
-      className="relative overflow-hidden bg-black py-32"
+      className="relative overflow-hidden bg-black py-12"
     >
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-black via-red-950/5 to-black" />

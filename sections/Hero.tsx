@@ -12,7 +12,7 @@ export default function Hero() {
       {/* Main Glow */}
       <div className="absolute left-1/2 top-0 h-[800px] w-[800px] -translate-x-1/2 rounded-full bg-red-700/10 blur-[180px]" />
 
-      <div className="relative mx-auto flex min-h-screen max-w-7xl flex-col-reverse items-center justify-center gap-16 px-6 py-20 lg:flex-row">
+      <div className="relative mx-auto flex min-h-screen max-w-7xl flex-col-reverse items-center justify-center gap-16 px-6 py-12 lg:flex-row">
 
         {/* Content */}
         <div className="flex-1 text-center lg:text-right">

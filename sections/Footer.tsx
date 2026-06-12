@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer
       id="footer"
-      className="relative overflow-hidden border-t border-red-900/20 bg-black py-16"
+      className="relative overflow-hidden border-t border-red-900/20 bg-black py-32"
     >
       {/* Glow */}
       <div className="absolute inset-0 bg-gradient-to-t from-red-950/10 via-transparent to-transparent" />
