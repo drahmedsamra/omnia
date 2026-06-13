@@ -12,34 +12,33 @@ export default function Hero() {
       {/* Main Glow */}
       <div className="absolute left-1/2 top-0 h-[800px] w-[800px] -translate-x-1/2 rounded-full bg-red-700/10 blur-[180px]" />
 
-      <div className="relative mx-auto flex min-h-screen max-w-7xl flex-col-reverse items-center justify-center gap-16 px-6 py-12 lg:flex-row">
+      <div className="relative mx-auto flex max-w-7xl flex-col-reverse items-center justify-center gap-8 px-6 py-8 lg:min-h-screen lg:flex-row">
 
         {/* Content */}
         <div className="flex-1 text-center lg:text-right">
 
-          {/* Badge */}
           <div className="mb-8 inline-flex items-center rounded-full border border-red-800/40 bg-red-950/20 px-6 py-3 text-sm font-medium text-red-400 backdrop-blur">
-          🎾 منتخب مصر للتنس • النادي الأهلي
+            🎾 منتخب مصر للتنس • النادي الأهلي
           </div>
 
-          {/* Title */}
           <h1 className="text-5xl font-black md:text-7xl lg:text-8xl">
-  <span className="block">أمنية أحمد</span>
-  <span className="mt-4 block">سمرة</span>
-</h1>
+            <span className="block">أمنية أحمد</span>
+            <span className="mt-4 block">سمرة</span>
+          </h1>
 
-<div className="mt-6 h-1 w-32 rounded-full bg-red-500" />
+          <div className="mt-6 h-1 w-32 rounded-full bg-red-500" />
 
-          {/* Subtitle */}
           <h2 className="mt-6 text-2xl font-medium text-gray-300 md:text-4xl">
             لاعبة منتخب مصر للتنس والنادي الأهلي
           </h2>
 
-          {/* Description */}
           <p className="mx-auto mt-8 max-w-2xl text-lg leading-9 text-gray-400 lg:mx-0">
-          لاعبة منتخب مصر للتنس ولاعبة النادي الأهلي، حققت العديد من بطولات الجمهورية في منافسات الفردي والزوجي، وحققت درع الدوري مع النادي الأهلي تمثل مصر في البطولات المحلية والإقليمية وتسعى للوصول إلى أعلى المستويات الدولية.          </p>
+            لاعبة منتخب مصر للتنس ولاعبة النادي الأهلي، حققت العديد من بطولات
+            الجمهورية في منافسات الفردي والزوجي، وحققت درع الدوري مع النادي
+            الأهلي وتمثل مصر في البطولات المحلية والإقليمية وتسعى للوصول إلى
+            أعلى المستويات الدولية.
+          </p>
 
-          {/* Buttons */}
           <div className="mt-10 flex flex-wrap justify-center gap-4 lg:justify-start">
 
             <a
@@ -58,86 +57,67 @@ export default function Hero() {
 
           </div>
 
-          {/* Divider */}
           <div className="mt-14 h-px w-full max-w-xl bg-gradient-to-l from-transparent via-red-900/40 to-transparent" />
 
-          {/* Stats */}
-<div className="mt-10 grid grid-cols-3 gap-5">
+          <div className="mt-10 grid grid-cols-3 gap-5">
 
-{/* Championships */}
-<div className="group rounded-3xl border border-red-900/30 bg-white/[0.04] p-6 backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:border-red-500/40 hover:bg-white/[0.06]">
+            <div className="group rounded-3xl border border-red-900/30 bg-white/[0.04] p-6 backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:border-red-500/40 hover:bg-white/[0.06]">
+              <div className="flex flex-col items-center justify-center text-center">
+                <div className="text-5xl font-black text-red-500">+30</div>
+                <div className="mt-4 text-base font-semibold text-white">
+                  بطولة جمهورية
+                </div>
+              </div>
+            </div>
 
-  <div className="flex flex-col items-center justify-center text-center">
+            <div className="group rounded-3xl border border-red-900/30 bg-white/[0.04] p-6 backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:border-red-500/40 hover:bg-white/[0.06]">
+              <div className="flex flex-col items-center justify-center text-center">
+                <div className="flex h-16 w-16 items-center justify-center rounded-full border border-red-500/20 bg-white/5">
+                  <span className="text-3xl">🇪🇬</span>
+                </div>
 
-    <div className="text-5xl font-black text-red-500">
-      +30
-    </div>
+                <div className="mt-4 text-base font-semibold text-white">
+                  منتخب مصر للتنس
+                </div>
+              </div>
+            </div>
 
-    <div className="mt-4 text-base font-semibold text-white">
-      بطولة جمهورية
-    </div>
+            <div className="group rounded-3xl border border-red-900/30 bg-white/[0.04] p-6 backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:border-red-500/40 hover:bg-white/[0.06]">
+              <div className="flex flex-col items-center justify-center text-center">
+                <div className="flex h-16 w-16 items-center justify-center rounded-full border border-red-500/20 bg-white/5">
+                  <Image
+                    src="/images/logos/ahly-logo.webp"
+                    alt="النادي الأهلي"
+                    width={42}
+                    height={42}
+                    className="h-auto w-auto object-contain"
+                  />
+                </div>
 
-  </div>
+                <div className="mt-4 text-base font-semibold text-white">
+                  النادي الأهلي
+                </div>
+              </div>
+            </div>
 
-</div>
+          </div>
+        </div>
 
-{/* Egypt */}
-<div className="group rounded-3xl border border-red-900/30 bg-white/[0.04] p-6 backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:border-red-500/40 hover:bg-white/[0.06]">
-
-  <div className="flex flex-col items-center justify-center text-center">
-
-    <div className="flex h-16 w-16 items-center justify-center rounded-full border border-red-500/20 bg-white/5">
-      <span className="text-3xl">🇪🇬</span>
-    </div>
-
-    <div className="mt-4 text-base font-semibold text-white">
-      منتخب مصر للتنس
-    </div>
-
-  </div>
-
-</div>
-
-{/* Al Ahly */}
-<div className="group rounded-3xl border border-red-900/30 bg-white/[0.04] p-6 backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:border-red-500/40 hover:bg-white/[0.06]">
-
-  <div className="flex flex-col items-center justify-center text-center">
-
-    <div className="flex h-16 w-16 items-center justify-center rounded-full border border-red-500/20 bg-white/5">
-    <Image
-  src="/images/logos/ahly-logo.webp"
-  alt="النادي الأهلي"
-  width={42}
-  height={42}
-  className="h-auto w-auto object-contain"
-/>
-    </div>
-
-    <div className="mt-4 text-base font-semibold text-white">
-      النادي الأهلي
-    </div>
-
-  </div>
-
-</div>
-
-</div>
-</div>
         {/* Player Image */}
-        <div className="flex flex-1 justify-center">
+        <div className="flex flex-[1.3] justify-center">
 
           <div className="relative">
 
-            <div className="absolute bottom-10 left-1/2 h-[550px] w-[550px] -translate-x-1/2 rounded-full bg-red-600/20 blur-[140px]" />
+            <div className="absolute bottom-10 left-1/2 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-red-600/20 blur-[140px] md:h-[650px] md:w-[650px]" />
 
             <Image
-              src="/images/hero/logo1.webp"
+              src="/images/hero/logo5.webp"
               alt="أمنية أحمد سمرة"
-              width={700}
-              height={1000}
+              width={1000}
+              height={1500}
               priority
-              sizes="(max-width:768px) 90vw, 45vw"
-              className="relative z-10 max-h-[720px] w-auto object-contain drop-shadow-[0_0_100px_rgba(220,38,38,0.35)]"
+              sizes="(max-width:768px) 85vw, 60vw"
+              className="relative z-10 h-[520px] w-auto object-contain md:h-[650px] lg:h-[850px] drop-shadow-[0_0_120px_rgba(220,38,38,0.4)]"
             />
 
           </div>
