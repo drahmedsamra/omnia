@@ -45,12 +45,11 @@ export default function Timeline() {
       id="timeline"
       className="relative overflow-hidden bg-black py-12"
     >
-      {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-black via-red-950/5 to-black" />
 
-      <div className="relative mx-auto max-w-6xl px-6">
+      <div className="relative mx-auto max-w-7xl px-6">
         {/* Header */}
-        <div className="mb-24 text-center">
+        <div className="mb-12 text-center">
           <span className="text-sm font-semibold uppercase tracking-[0.3em] text-red-500">
             CAREER JOURNEY
           </span>
@@ -67,55 +66,40 @@ export default function Timeline() {
         </div>
 
         {/* Timeline */}
-        <div className="relative">
-          {/* Center Line */}
-          <div className="absolute right-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-gradient-to-b from-transparent via-red-500/40 to-transparent md:block" />
-
-          <div className="space-y-16">
-            {timelineData.map((item, index) => (
-              <div
-                key={item.year}
-                className={`relative flex items-center ${
-                  index % 2 === 0 ? "md:justify-start" : "md:justify-end"
-                }`}
-              >
-                {/* Dot */}
-                <div className="absolute right-1/2 hidden h-5 w-5 translate-x-1/2 rounded-full border-4 border-black bg-red-500 shadow-[0_0_25px_rgba(239,68,68,0.7)] md:block" />
-
-                {/* Card */}
-                <div
-                  className="
-                    w-full
-                    md:w-[45%]
-                    rounded-3xl
-                    border
-                    border-red-900/20
-                    bg-white/[0.03]
-                    p-8
-                    backdrop-blur-md
-                    transition-all
-                    duration-300
-                    hover:border-red-500/40
-                    hover:-translate-y-1
-                  "
-                >
-                  <div className="text-5xl font-black text-red-500">
-                    {item.year}
-                  </div>
-
-                  <div className="mt-4 h-px w-20 bg-red-500/50" />
-
-                  <h3 className="mt-6 text-3xl font-bold text-white">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-4 leading-8 text-gray-400">
-                    {item.description}
-                  </p>
-                </div>
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {timelineData.map((item) => (
+            <div
+              key={item.year}
+              className="
+                group
+                rounded-3xl
+                border
+                border-red-900/20
+                bg-white/[0.03]
+                p-6
+                backdrop-blur-md
+                transition-all
+                duration-300
+                hover:-translate-y-2
+                hover:border-red-500/40
+                hover:bg-white/[0.05]
+              "
+            >
+              <div className="text-5xl font-black text-red-500">
+                {item.year}
               </div>
-            ))}
-          </div>
+
+              <div className="mt-4 h-px w-20 bg-red-500/50" />
+
+              <h3 className="mt-5 text-2xl font-bold text-white">
+                {item.title}
+              </h3>
+
+              <p className="mt-4 leading-7 text-gray-400">
+                {item.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

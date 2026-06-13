@@ -49,6 +49,7 @@ export default function Coach() {
   alt="المهندس أحمد سمرة مدرب تنس معتمد من الاتحاد الدولي للتنس ITF ومدرب اللاعبة أمنية أحمد سمرة"
   title="المهندس أحمد سمرة - مدرب تنس معتمد ITF"
   fill
+  sizes="(max-width: 768px) 100vw, 400px"
   className="object-cover"
 />
                 </div>

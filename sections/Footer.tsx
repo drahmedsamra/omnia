@@ -47,15 +47,15 @@ export default function Footer() {
 
           </div>
 
-          {/* Instagram */}
-          <a
-            href="https://instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-8 rounded-full border border-red-500/30 px-6 py-3 text-sm font-medium text-white transition hover:bg-red-600 hover:border-red-600"
-          >
-            Instagram
-          </a>
+          {/* Facebook */}
+<a
+  href="https://www.facebook.com/omniasamratennis"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-8 rounded-full border border-blue-500/30 bg-blue-500/10 px-6 py-3 text-sm font-medium text-white transition hover:bg-blue-600 hover:border-blue-600"
+>
+  تابع أمنية على Facebook
+</a>
 
           {/* Copyright */}
           <div className="mt-10 border-t border-red-900/20 pt-6 text-sm text-gray-500">
