@@ -33,12 +33,13 @@ export default function Footer() {
             </div>
 
             <div className="flex items-center gap-2 rounded-full border border-red-900/20 bg-white/[0.03] px-4 py-2">
-              <Image
-                src="/images/logos/ahly-logo.webp"
-                alt="النادي الأهلي"
-                width={24}
-                height={24}
-              />
+            <Image
+  src="/images/logos/ahly-logo.webp"
+  alt="النادي الأهلي"
+  width={24}
+  height={24}
+  className="h-auto w-auto"
+/>
               <span className="text-sm text-gray-300">
                 النادي الأهلي
               </span>

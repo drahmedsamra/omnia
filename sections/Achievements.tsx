@@ -81,12 +81,12 @@ export default function Achievements() {
               <div className="mb-5 flex justify-center transition-transform duration-300 group-hover:scale-110">
                 {item.icon === "ahly" ? (
                   <Image
-                    src="/images/logos/ahly-logo.webp"
-                    alt="النادي الأهلي"
-                    width={60}
-                    height={60}
-                    className="object-contain"
-                  />
+                  src="/images/logos/ahly-logo.webp"
+                  alt="النادي الأهلي"
+                  width={35}
+                  height={35}
+                  className="h-auto w-auto object-contain"
+                />
                 ) : (
                   <span className="text-5xl">{item.icon}</span>
                 )}

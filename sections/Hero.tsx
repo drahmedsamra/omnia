@@ -104,13 +104,13 @@ export default function Hero() {
   <div className="flex flex-col items-center justify-center text-center">
 
     <div className="flex h-16 w-16 items-center justify-center rounded-full border border-red-500/20 bg-white/5">
-      <Image
-        src="/images/logos/ahly-logo.webp"
-        alt="النادي الأهلي"
-        width={42}
-        height={42}
-        className="object-contain"
-      />
+    <Image
+  src="/images/logos/ahly-logo.webp"
+  alt="النادي الأهلي"
+  width={42}
+  height={42}
+  className="h-auto w-auto object-contain"
+/>
     </div>
 
     <div className="mt-4 text-base font-semibold text-white">
