@@ -6,6 +6,7 @@ import Footer from "@/sections/Footer";
 import Timeline from "@/sections/Timeline";
 import Coach from "@/sections/Coach";
 import Sponsors from "@/sections/Sponsors";
+import Contributors from "@/sections/Contributors";
 
 export default function Home() {
   return (
@@ -24,6 +25,8 @@ export default function Home() {
       <Coach />
 
       <FeaturedMoments />
+
+      <Contributors />
 
       <Footer />
 
