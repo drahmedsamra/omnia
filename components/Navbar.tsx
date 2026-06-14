@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState } from "react";
@@ -8,9 +9,10 @@ export default function Navbar() {
   const links = [
     { name: "الرئيسية", href: "#hero" },
     { name: "نبذة", href: "#about" },
+    { name: "المسيرة", href: "#timeline" },
     { name: "الإنجازات", href: "#achievements" },
     { name: "الصور", href: "#gallery" },
-    { name: "المسيرة", href: "#timeline" },
+    { name: "المدرب", href: "#coach" },
   ];
 
   return (
@@ -45,15 +47,15 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* Social */}
-<a
-  href="https://www.facebook.com/omniasamratennis"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="hidden md:flex items-center rounded-full border border-red-900/20 px-4 py-2 text-sm text-gray-200 transition hover:border-red-500 hover:bg-red-500/10 hover:text-white"
->
-  Facebook
-</a>
+          {/* Desktop Facebook */}
+          <a
+            href="https://www.facebook.com/omniasamratennis"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden md:flex items-center rounded-full border border-red-900/20 px-4 py-2 text-sm text-gray-200 transition hover:border-red-500 hover:bg-red-500/10 hover:text-white"
+          >
+            Facebook
+          </a>
 
           {/* Mobile Menu Button */}
           <button
@@ -122,14 +124,15 @@ export default function Navbar() {
               </a>
             ))}
 
-<a
-  href="https://www.facebook.com/omniasamratennis"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="hidden md:flex items-center rounded-full border border-red-900/20 px-4 py-2 text-sm text-gray-200 transition hover:border-red-500 hover:bg-red-500/10 hover:text-white"
->
-  Facebook
-</a>
+            {/* Mobile Facebook */}
+            <a
+              href="https://www.facebook.com/omniasamratennis"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 rounded-full border border-red-900/20 px-4 py-2 text-center text-sm text-gray-200 transition hover:border-red-500 hover:bg-red-500/10 hover:text-white"
+            >
+              Facebook
+            </a>
           </div>
         </div>
       </div>
