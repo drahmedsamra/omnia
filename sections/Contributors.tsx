@@ -53,7 +53,7 @@ export default function Contributors() {
   <div className="mb-4 text-5xl">❤️</div>
 
   <h3 className="text-3xl font-black text-white">
-    والدة أمنية أحمد سمرة
+    والدة أمنية
   </h3>
 
   <p className="mt-2 text-red-500">
