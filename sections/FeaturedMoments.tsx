@@ -112,7 +112,7 @@ export default function FeaturedMoments() {
   return (
     <section
       id="gallery"
-      className="relative overflow-hidden bg-black py-12"
+      className="relative overflow-hidden bg-black py-16"
     >
       <div className="absolute left-1/2 top-0 h-[400px] w-[400px] -translate-x-1/2 bg-red-900/10 blur-[150px]" />
 

@@ -34,7 +34,7 @@ export default function Achievements() {
   return (
     <section
       id="achievements"
-      className="relative overflow-hidden bg-black py-12"
+      className="relative overflow-hidden bg-black py-16"
     >
       <div className="absolute inset-0 bg-gradient-to-b from-black via-red-950/5 to-black" />
 

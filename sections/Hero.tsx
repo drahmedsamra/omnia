@@ -111,7 +111,7 @@ export default function Hero() {
             <div className="absolute bottom-10 left-1/2 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-red-600/20 blur-[140px] md:h-[650px] md:w-[650px]" />
 
             <Image
-              src="/images/hero/logo5.webp"
+              src="/images/hero/hero6.webp"
               alt="أمنية أحمد سمرة"
               width={1000}
               height={1500}

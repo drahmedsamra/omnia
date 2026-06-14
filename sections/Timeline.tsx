@@ -17,7 +17,7 @@ const timelineData = [
     year: "2023",
     title: "مستوى متقدم",
     description:
-      "بداية العمل على الفنيات واكتساب المهارات.",
+      "بداية العمل على الفنيات واكتساب المهارات المتقدمة.",
   },
   {
     year: "2024",
@@ -43,13 +43,13 @@ export default function Timeline() {
   return (
     <section
       id="timeline"
-      className="relative overflow-hidden bg-black py-12"
+      className="relative overflow-hidden bg-black py-20"
     >
       <div className="absolute inset-0 bg-gradient-to-b from-black via-red-950/5 to-black" />
 
       <div className="relative mx-auto max-w-7xl px-6">
         {/* Header */}
-        <div className="mb-12 text-center">
+        <div className="mb-20 text-center">
           <span className="text-sm font-semibold uppercase tracking-[0.3em] text-red-500">
             CAREER JOURNEY
           </span>
@@ -66,40 +66,58 @@ export default function Timeline() {
         </div>
 
         {/* Timeline */}
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {timelineData.map((item) => (
-            <div
-              key={item.year}
-              className="
-                group
-                rounded-3xl
-                border
-                border-red-900/20
-                bg-white/[0.03]
-                p-6
-                backdrop-blur-md
-                transition-all
-                duration-300
-                hover:-translate-y-2
-                hover:border-red-500/40
-                hover:bg-white/[0.05]
-              "
-            >
-              <div className="text-5xl font-black text-red-500">
-                {item.year}
+        <div className="relative">
+          {/* Center Line */}
+          <div className="absolute right-5 top-0 h-full w-px bg-red-500/30 md:right-1/2 md:translate-x-1/2" />
+
+          <div className="space-y-10">
+            {timelineData.map((item, index) => (
+              <div
+                key={item.year}
+                className={`relative flex w-full ${
+                  index % 2 === 0
+                    ? "md:justify-start"
+                    : "md:justify-end"
+                }`}
+              >
+                {/* Dot */}
+                <div className="absolute right-[13px] top-8 z-20 h-4 w-4 rounded-full border-4 border-black bg-red-500 md:right-1/2 md:translate-x-1/2" />
+
+                {/* Card */}
+                <div
+                  className={`
+                    mr-12 w-full
+                    rounded-3xl
+                    border border-red-900/20
+                    bg-white/[0.03]
+                    p-6
+                    backdrop-blur-md
+                    transition-all
+                    duration-300
+                    hover:border-red-500/40
+                    hover:bg-white/[0.05]
+
+                    md:mr-0
+                    md:w-[46%]
+                  `}
+                >
+                  <div className="text-4xl font-black text-red-500">
+                    {item.year}
+                  </div>
+
+                  <div className="mt-3 h-px w-20 bg-red-500/50" />
+
+                  <h3 className="mt-4 text-2xl font-bold text-white">
+                    {item.title}
+                  </h3>
+
+                  <p className="mt-3 leading-7 text-gray-400">
+                    {item.description}
+                  </p>
+                </div>
               </div>
-
-              <div className="mt-4 h-px w-20 bg-red-500/50" />
-
-              <h3 className="mt-5 text-2xl font-bold text-white">
-                {item.title}
-              </h3>
-
-              <p className="mt-4 leading-7 text-gray-400">
-                {item.description}
-              </p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -4,7 +4,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative overflow-hidden bg-black py-12"
+      className="relative overflow-hidden bg-black py-16"
     >
       {/* Background Glow */}
       <div className="absolute left-1/2 top-20 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-red-900/10 blur-[150px]" />
