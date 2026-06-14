@@ -4,7 +4,7 @@ const tennisCoaches = [
   "أحمد سعيد",
   "إبراهيم أبو طالب",
   "محمود عبد المبدي",
-  "محمد جمال",
+  " محمد جمال",
   "أنس أسامة",
   "محمد صلاح",
   "محمد أبو الفتوح",
@@ -15,7 +15,6 @@ const tennisCoaches = [
 
 const fitnessCoaches = [
   "أسامة حمدي",
-  "يوسف محمد",
   "حماده حمدان",
 ];
 
@@ -47,45 +46,91 @@ export default function Contributors() {
           <div className="mx-auto mt-8 h-px w-40 bg-gradient-to-r from-transparent via-red-500/40 to-transparent" />
         </div>
 
-        {/* Main Contributors */}
-        <div className="grid gap-6 lg:grid-cols-2">
-          {/* Mother */}
-          <div className="rounded-3xl border border-red-900/20 bg-white/[0.03] p-8 backdrop-blur-md">
-            <div className="mb-4 text-5xl">❤️</div>
+       {/* Main Contributors */}
+<div className="grid gap-6 md:grid-cols-2">
 
-            <h3 className="text-3xl font-black text-white">
-              والدة أمنية أحمد سمرة
-            </h3>
+{/* Mother */}
+<div className="rounded-3xl border border-red-900/20 bg-white/[0.03] p-8 backdrop-blur-md">
+  <div className="mb-4 text-5xl">❤️</div>
 
-            <p className="mt-2 text-red-500">
-              الداعم الأكبر في الرحلة
-            </p>
+  <h3 className="text-3xl font-black text-white">
+    والدة أمنية أحمد سمرة
+  </h3>
 
-            <p className="mt-6 leading-8 text-gray-400">
-              كانت ولا تزال الداعم الأكبر في رحلة أمنية الرياضية، من خلال
-              الاهتمام اليومي بالتفاصيل، والحرص على التغذية السليمة والراحة
-              والانضباط، وتوفير البيئة المناسبة التي تساعد على الاستمرار
-              والتطور وتحقيق النجاحات داخل وخارج الملعب.
-            </p>
-          </div>
+  <p className="mt-2 text-red-500">
+    الداعم الأكبر في الرحلة
+  </p>
 
-          {/* Ahmed Tarek */}
-          <div className="rounded-3xl border border-red-900/20 bg-white/[0.03] p-8 backdrop-blur-md">
-            <div className="mb-4 text-5xl">❤️</div>
+  <p className="mt-6 leading-8 text-gray-400">
+    كانت ولا تزال الداعم الأكبر في رحلة أمنية الرياضية، من خلال
+    الاهتمام اليومي بالتفاصيل، والحرص على التغذية السليمة والراحة
+    والانضباط، وتوفير البيئة المناسبة التي تساعد على الاستمرار
+    والتطور وتحقيق النجاحات داخل وخارج الملعب.
+  </p>
+</div>
 
-            <h3 className="text-3xl font-black text-white">
-              زياد  سمره
-            </h3>
+{/* Ziad */}
+<div className="rounded-3xl border border-red-900/20 bg-white/[0.03] p-8 backdrop-blur-md">
+  <div className="mb-4 text-5xl">👨‍👧</div>
 
-            <p className="mt-2 text-red-500">
-              الأخ والداعم الدائم
-            </p>
+  <h3 className="text-3xl font-black text-white">
+    زياد سمرة
+  </h3>
 
-            <p className="mt-6 leading-8 text-gray-400">
-الأخ والداعم الدائم، والذي كان له دور كبير في مسيرة أمنية من خلال المتابعة اليومية والمساندة المستمرة داخل وخارج الملعب. يشارك في تنظيم المباريات التدريبية والاهتمام بالتفاصيل الرياضية المختلفة، ويتحمل مسؤولية كبيرة في دعمها وتطوير مستواها عندما تتطلب الظروف ذلك.
-            </p>
-          </div>
-        </div>
+  <p className="mt-2 text-red-500">
+    الأخ والداعم الدائم
+  </p>
+
+  <p className="mt-6 leading-8 text-gray-400">
+    كان له دور كبير في مسيرة أمنية من خلال المتابعة اليومية والمساندة
+    المستمرة داخل وخارج الملعب. يشارك في تنظيم المباريات التدريبية
+    والاهتمام بالتفاصيل الرياضية المختلفة، ويتحمل مسؤولية كبيرة في دعمها
+    وتطوير مستواها عندما تتطلب الظروف ذلك.
+  </p>
+</div>
+
+{/* Jimmy */}
+<div className="rounded-3xl border border-red-900/20 bg-white/[0.03] p-8 backdrop-blur-md">
+  <div className="mb-4 text-5xl">🎾</div>
+
+  <h3 className="text-3xl font-black text-white">
+    محمد جمال (جيمي)
+  </h3>
+
+  <p className="mt-2 text-red-500">
+    مدرب التأسيس والتكنيك
+  </p>
+
+  <p className="mt-6 leading-8 text-gray-400">
+    يُعد الكابتن محمد جمال (جيمي) أحد أهم الأسماء في بداية رحلة أمنية
+    الرياضية، حيث تولى مرحلة التأسيس الأولى ووضع الأساس الفني والمهاري
+    للاعبة منذ سنواتها الأولى. كما كان مسؤولًا عن تطوير التكنيك الصحيح
+    وبناء المهارات الأساسية التي ساهمت في تكوين شخصيتها داخل الملعب
+    وإعدادها للمراحل المتقدمة والمنافسات الرسمية.
+  </p>
+</div>
+
+{/* Ahmed Tarek */}
+<div className="rounded-3xl border border-red-900/20 bg-white/[0.03] p-8 backdrop-blur-md">
+  <div className="mb-4 text-5xl">🏆</div>
+
+  <h3 className="text-3xl font-black text-white">
+    الكابتن أحمد طارق
+  </h3>
+
+  <p className="mt-2 text-red-500">
+    مدير نشاط التنس بالنادي الأهلي
+  </p>
+
+  <p className="mt-6 leading-8 text-gray-400">
+    كان من أوائل من آمنوا بموهبة أمنية ورأوا إمكاناتها الرياضية،
+    وكان له دور مهم في انضمامها إلى منظومة النادي الأهلي. كما قدم
+    لها الدعم والتحفيز المستمر وساهم في تطوير مسيرتها داخل النادي،
+    وكان دائمًا مصدر ثقة وتشجيع خلال مراحل مهمة من رحلتها الرياضية.
+  </p>
+</div>
+
+</div>
 
         {/* Tennis Coaches */}
         <div className="mt-16">
