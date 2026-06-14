@@ -1,55 +1,57 @@
 "use client";
 
+import { useState } from "react";
+
 const timelineData = [
   {
     year: "2018",
     title: "بداية الرحلة",
-    description:
-      "بداية رحلة أمنية أحمد سمرة مع رياضة التنس وتطوير المهارات الأساسية.",
+    description: "بداية مشوار أمنية مع رياضة التنس.",
   },
   {
     year: "2020",
     title: "بداية المنافسة",
-    description:
-      "المشاركة في البطولات تحت ١٠ سنوات وتحقيق مراكز أولى.",
+    description: "المشاركة في بطولات تحت ١٠ سنوات.",
   },
   {
     year: "2023",
     title: "مستوى متقدم",
-    description:
-      "بداية العمل على الفنيات واكتساب المهارات المتقدمة.",
+    description: "تطوير الفنيات والمهارات المتقدمة.",
   },
   {
     year: "2024",
     title: "أولى البطولات",
-    description:
-      "المشاركة في أولى البطولات الرسمية تحت ١٢ سنة وتحقيق ٨ بطولات جمهورية.",
+    description: "تحقيق ٨ بطولات جمهورية تحت ١٢ سنة.",
   },
   {
     year: "2025",
     title: "النادي الأهلي",
-    description:
-      "الانضمام لفريق النادي الأهلي تحت ١٢ سنة والمشاركة في تحقيق درع الدوري العام.",
+    description: "الانضمام للنادي الأهلي وتحقيق درع الدوري.",
   },
   {
     year: "2026",
     title: "منتخب مصر",
-    description:
-      "الانضمام إلى منتخب مصر تحت ١٢ سنة وتمثيل مصر في المنافسات الرسمية.",
+    description: "تمثيل مصر ضمن منتخب مصر للتنس.",
   },
 ];
 
 export default function Timeline() {
+  const [showAll, setShowAll] = useState(false);
+
+  const visibleItems = showAll
+    ? timelineData
+    : timelineData.slice(0, 4);
+
   return (
     <section
       id="timeline"
-      className="relative overflow-hidden bg-black py-20"
+      className="relative overflow-hidden bg-black py-16"
     >
       <div className="absolute inset-0 bg-gradient-to-b from-black via-red-950/5 to-black" />
 
       <div className="relative mx-auto max-w-7xl px-6">
         {/* Header */}
-        <div className="mb-20 text-center">
+        <div className="mb-16 text-center">
           <span className="text-sm font-semibold uppercase tracking-[0.3em] text-red-500">
             CAREER JOURNEY
           </span>
@@ -67,11 +69,10 @@ export default function Timeline() {
 
         {/* Timeline */}
         <div className="relative">
-          {/* Center Line */}
           <div className="absolute right-5 top-0 h-full w-px bg-red-500/30 md:right-1/2 md:translate-x-1/2" />
 
-          <div className="space-y-10">
-            {timelineData.map((item, index) => (
+          <div className="space-y-6">
+            {visibleItems.map((item, index) => (
               <div
                 key={item.year}
                 className={`relative flex w-full ${
@@ -81,7 +82,7 @@ export default function Timeline() {
                 }`}
               >
                 {/* Dot */}
-                <div className="absolute right-[13px] top-8 z-20 h-4 w-4 rounded-full border-4 border-black bg-red-500 md:right-1/2 md:translate-x-1/2" />
+                <div className="absolute right-[13px] top-7 z-20 h-4 w-4 rounded-full border-4 border-black bg-red-500 md:right-1/2 md:translate-x-1/2" />
 
                 {/* Card */}
                 <div
@@ -90,7 +91,7 @@ export default function Timeline() {
                     rounded-3xl
                     border border-red-900/20
                     bg-white/[0.03]
-                    p-6
+                    p-4
                     backdrop-blur-md
                     transition-all
                     duration-300
@@ -101,22 +102,32 @@ export default function Timeline() {
                     md:w-[46%]
                   `}
                 >
-                  <div className="text-4xl font-black text-red-500">
+                  <div className="text-3xl font-black text-red-500 md:text-4xl">
                     {item.year}
                   </div>
 
-                  <div className="mt-3 h-px w-20 bg-red-500/50" />
+                  <div className="mt-2 h-px w-16 bg-red-500/50" />
 
-                  <h3 className="mt-4 text-2xl font-bold text-white">
+                  <h3 className="mt-3 text-xl font-bold text-white">
                     {item.title}
                   </h3>
 
-                  <p className="mt-3 leading-7 text-gray-400">
+                  <p className="mt-2 text-sm leading-6 text-gray-400">
                     {item.description}
                   </p>
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Button */}
+          <div className="mt-10 text-center">
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="rounded-full border border-red-500/30 px-6 py-3 text-sm font-bold text-red-400 transition-all hover:border-red-500 hover:bg-red-500 hover:text-white"
+            >
+              {showAll ? "عرض أقل" : "عرض باقي المسيرة"}
+            </button>
           </div>
         </div>
       </div>
