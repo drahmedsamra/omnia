@@ -122,14 +122,14 @@ export default function Navbar() {
               </a>
             ))}
 
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-8 rounded-xl bg-red-600 py-3 text-center font-bold text-white transition hover:bg-red-500"
-            >
-              Instagram
-            </a>
+<a
+  href="https://www.facebook.com/omniasamratennis"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="hidden md:flex items-center rounded-full border border-red-900/20 px-4 py-2 text-sm text-gray-200 transition hover:border-red-500 hover:bg-red-500/10 hover:text-white"
+>
+  Facebook
+</a>
           </div>
         </div>
       </div>
