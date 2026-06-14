@@ -16,7 +16,7 @@ const tennisCoaches = [
 const fitnessCoaches = [
   "أسامة حمدي",
   "يوسف محمد",
-  "حماده محمد",
+  "حماده حمدان",
 ];
 
 export default function Contributors() {
