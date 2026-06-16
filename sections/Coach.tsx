@@ -48,7 +48,7 @@ export default function Coach() {
 
                 <div className="relative h-[250px] w-[250px] overflow-hidden rounded-full border-4 border-red-500/30 md:h-[320px] md:w-[320px]">
                   <Image
-                    src="/images/coach/ahmed-samra-itf-tennis-coach.webp"
+                    src="/images/coach/ahmed-samra-itf-tennis-coach1.webp"
                     alt="المهندس أحمد سمرة مدرب تنس معتمد من الاتحاد الدولي للتنس ITF ومدرب اللاعبة أمنية أحمد سمرة"
                     title="المهندس أحمد سمرة - مدرب تنس معتمد ITF"
                     fill
@@ -75,7 +75,7 @@ export default function Coach() {
             </span>
 
             <h3 className="mt-4 text-4xl font-black text-white md:text-5xl">
-              المهندس أحمد سمرة
+               أحمد سمرة
             </h3>
 
             <p className="mt-3 text-lg text-gray-300 md:text-xl">
@@ -111,7 +111,7 @@ export default function Coach() {
               }`}
             >
               <p className="mt-6 text-lg leading-8 text-gray-400">
-                حقق العديد من الإنجازات في البطولات الرسمية والودية، كما يمتلك
+                حقق العديد من الإنجازات في البطولات الرسمية وحصل علي المركز الأول ٣ مرات في بطولة نادي وادي دجله السنويه ٢٠٢٣ و٢٠٢٤ و٢٠٢٥ والمركز الأول في بطولة الزمالك ٢٠٢٥ والمركز الأول في بطولة الأهلي ٢٠٢٦ ، كما يمتلك
                 خلفية رياضية متنوعة كلاعب تنس ومن قبلها لاعب كرة قدم سابق. يحمل درجة الماجستير في
                 هندسة الاتصالات ويواصل أبحاثه العلمية كباحث دكتوراه، ويشرف على
                 البرنامج التدريبي للاعبة أمنية أحمد سمرة من خلال خطة تدريبية

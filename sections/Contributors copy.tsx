@@ -73,6 +73,71 @@ export default function Contributors() {
   </p>
 </div>
 
+####
+{/* Ziad */}
+<div className="rounded-3xl border border-red-900/20 bg-white/[0.03] p-8 backdrop-blur-md">
+  <div className="mb-4 text-5xl">👨‍👧</div>
+
+  <h3 className="text-3xl font-black text-white">
+    زياد سمرة
+  </h3>
+
+  <p className="mt-2 text-red-500">
+    الأخ والداعم الدائم
+  </p>
+
+  <p className="mt-6 leading-8 text-gray-400">
+    كان له دور كبير في مسيرة أمنية من خلال المتابعة اليومية والمساندة
+    المستمرة داخل وخارج الملعب. يشارك في تنظيم المباريات التدريبية
+    والاهتمام بالتفاصيل الرياضية المختلفة، ويتحمل مسؤولية كبيرة في دعمها
+    وتطوير مستواها ولعب ماتشات مستمره معها.
+  </p>
+</div>
+
+{/* Jimmy */}
+<div className="rounded-3xl border border-red-900/20 bg-white/[0.03] p-8 backdrop-blur-md">
+  <div className="mb-4 text-5xl">🎾</div>
+
+  <h3 className="text-3xl font-black text-white">
+    محمد جمال 
+  </h3>
+
+  <p className="mt-2 text-red-500">
+    مدرب التأسيس والتكنيك
+  </p>
+
+  <p className="mt-6 leading-8 text-gray-400">
+    يُعد الكابتن محمد جمال أحد أهم الأسماء في بداية رحلة أمنية
+    الرياضية، حيث تولى مرحلة التأسيس الأولى ووضع الأساس الفني والمهاري
+    للاعبة منذ سنواتها الأولى. كما كان مسؤولًا عن تطوير التكنيك الصحيح
+    وبناء المهارات الأساسية التي ساهمت في تكوين شخصيتها داخل الملعب
+    وإعدادها للمراحل المتقدمة والمنافسات الرسمية .
+  </p>
+</div>
+
+{/* Ahmed Tarek */}
+<div className="rounded-3xl border border-red-900/20 bg-white/[0.03] p-8 backdrop-blur-md">
+  <div className="mb-4 text-5xl">🏆</div>
+
+  <h3 className="text-3xl font-black text-white">
+    الكابتن أحمد طارق
+  </h3>
+
+  <p className="mt-2 text-red-500">
+    مدير نشاط التنس بالنادي الأهلي
+  </p>
+
+  <p className="mt-6 leading-8 text-gray-400">
+    كان من أوائل من آمنوا بموهبة أمنية ورأوا إمكاناتها الرياضية،
+    وكان له دور مهم في انضمامها إلى منظومة النادي الأهلي. كما قدم
+    لها الدعم والتحفيز المستمر وساهم في تطوير مسيرتها داخل النادي،
+    وكان دائمًا مصدر ثقة وتشجيع خلال مراحل مهمة من رحلتها الرياضية.
+  </p>
+</div> 
+
+###
+
+
 
 </div>
 

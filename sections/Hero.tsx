@@ -22,8 +22,8 @@ export default function Hero() {
           </div>
 
           <h1 className="text-5xl font-black md:text-7xl lg:text-8xl">
-            <span className="block">أمنية أحمد</span>
-            <span className="mt-4 block">سمرة</span>
+            <span className="block">أمنية سمرة</span>
+            
           </h1>
 
           <div className="mt-6 h-1 w-32 rounded-full bg-red-500" />
