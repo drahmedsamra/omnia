@@ -48,7 +48,7 @@ export default function Coach() {
 
                 <div className="relative h-[250px] w-[250px] overflow-hidden rounded-full border-4 border-red-500/30 md:h-[320px] md:w-[320px]">
                   <Image
-                    src="/images/coach/ahmed-samra-itf-tennis-coach2.webp"
+                    src="/images/coach/ahmed-samra-itf-tennis-coach3.webp"
                     alt="المهندس أحمد سمرة مدرب تنس معتمد من الاتحاد الدولي للتنس ITF ومدرب اللاعبة أمنية أحمد سمرة"
                     title="المهندس أحمد سمرة - مدرب تنس معتمد ITF"
                     fill
