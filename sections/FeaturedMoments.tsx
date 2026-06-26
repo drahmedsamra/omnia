@@ -5,11 +5,25 @@ import Image from "next/image";
 
 const slides = [
   {
+    image: "/images/gallery/omnia-samra-egypt-tennis-team17.webp",
+    title: "البطولة العربية",
+    description: "أمنية أحمد سمرة مع منتخب مصر في البطولة العربية للمنتخبات.",
+    alt: "أمنية أحمد سمرة مع منتخب مصر في البطولة العربية للمنتخبات",
+    imageTitle: "أمنية أحمد سمرة - البطولة العربية للمنتخبات",
+  },
+  {
     image: "/images/gallery/omnia-ahmed-samra-tennis.webp",
     title: "بطولات الجمهورية",
     description: "لقطات من البطولات المحلية.",
     alt: "أمنية أحمد سمرة خلال منافسات بطولة الجمهورية للتنس",
     imageTitle: "أمنية أحمد سمرة - بطولة الجمهورية للتنس",
+  },
+  {
+    image: "/images/gallery/omnia-samra-egypt-tennis-team4.webp",
+    title: "منتخب مصر",
+    description: "لقطات من منافسات البطولة العربية.",
+    alt: "أمنية أحمد سمرة خلال البطولة العربية للتنس",
+    imageTitle: "أمنية أحمد سمرة - منتخب مصر",
   },
   {
     image: "/images/gallery/omnia-ahmed-samra-tennis-ahly-champion.webp",
@@ -18,6 +32,14 @@ const slides = [
     alt: "أمنية أحمد سمرة أثناء التتويج بإحدى بطولات التنس",
     imageTitle: "أمنية أحمد سمرة - كأس البطولة",
   },
+
+  {
+    image: "/images/gallery/omnia-samra-egypt-tennis-team21.webp",
+    title: "روح الفريق",
+    description: "ذكريات مع زميلات منتخب مصر.",
+    alt: "أمنية أحمد سمرة مع زميلاتها في منتخب مصر",
+    imageTitle: "أمنية أحمد سمرة - روح الفريق",
+  },
   {
     image: "/images/gallery/omnia-ahmed-samra-tennis-ahly-team.webp.webp",
     title: "فريق الأهلي",
@@ -25,11 +47,29 @@ const slides = [
     alt: "أمنية أحمد سمرة مع فريق النادي الأهلي للتنس",
     imageTitle: "أمنية أحمد سمرة - النادي الأهلي",
   },
+
+
+  {
+    image: "/images/gallery/omnia-samra-egypt-tennis-team8.webp",
+    title: "البطولة العربية",
+    description: "لحظات مميزة داخل البطولة.",
+    alt: "أمنية أحمد سمرة في البطولة العربية للمنتخبات",
+    imageTitle: "أمنية أحمد سمرة - البطولة العربية",
+  },
   {
     image: "/images/gallery/omnia-samra-tennis-friends.webp",
     title: "منتخب مصر",
     description: "رحلة المنافسة والإنجاز.",
     alt: "أمنية أحمد سمرة لاعبة منتخب مصر للتنس",
+    imageTitle: "أمنية أحمد سمرة - منتخب مصر",
+  },
+
+
+  {
+    image: "/images/gallery/omnia-samra-egypt-tennis-team13.webp",
+    title: "منتخب مصر",
+    description: "مشاركات قوية مع المنتخب الوطني.",
+    alt: "أمنية أحمد سمرة تمثل منتخب مصر",
     imageTitle: "أمنية أحمد سمرة - منتخب مصر",
   },
   {
@@ -39,12 +79,30 @@ const slides = [
     alt: "أمنية أحمد سمرة خلال إحدى بطولات النادي",
     imageTitle: "أمنية أحمد سمرة - بطولات النادي",
   },
+
+
+  {
+    image: "/images/gallery/omnia-samra-egypt-tennis-team2.webp",
+    title: "لحظات البطولة",
+    description: "أجواء المنافسة العربية.",
+    alt: "أمنية أحمد سمرة خلال البطولة العربية",
+    imageTitle: "أمنية أحمد سمرة - البطولة",
+  },
   {
     image: "/images/gallery/omnia-samra-ahly-team-competitions.webp",
     title: "اللاعبات",
     description: "ذكريات جميلة مع الفريق.",
     alt: "أمنية أحمد سمرة مع زميلاتها في فريق التنس",
     imageTitle: "أمنية أحمد سمرة - فريق اللاعبات",
+  },
+
+
+  {
+    image: "/images/gallery/omnia-samra-egypt-tennis-team24.webp",
+    title: "إنجاز جديد",
+    description: "من أجمل ذكريات البطولة العربية.",
+    alt: "أمنية أحمد سمرة في البطولة العربية للتنس",
+    imageTitle: "أمنية أحمد سمرة - إنجاز جديد",
   },
   {
     image: "/images/gallery/omnia-samra-tennis-1st-egypt.webp",
@@ -53,12 +111,30 @@ const slides = [
     alt: "أمنية أحمد سمرة بعد تحقيق المركز الأول في بطولة تنس",
     imageTitle: "أمنية أحمد سمرة - المركز الأول",
   },
+
+
+  {
+    image: "/images/gallery/omnia-samra-egypt-tennis-team10.webp",
+    title: "الفريق المصري",
+    description: "رحلة مليئة بالتحديات والإنجازات.",
+    alt: "أمنية أحمد سمرة مع لاعبات منتخب مصر",
+    imageTitle: "أمنية أحمد سمرة - الفريق المصري",
+  },
   {
     image: "/images/gallery/omnia-samra-double-tennis-1st.webp",
     title: "بطولات الزوجي",
     description: "منافسات قوية ومميزة.",
     alt: "أمنية أحمد سمرة خلال منافسات الزوجي في بطولة تنس",
     imageTitle: "أمنية أحمد سمرة - بطولات الزوجي",
+  },
+
+
+  {
+    image: "/images/gallery/omnia-samra-egypt-tennis-team6.webp",
+    title: "بطولة المنتخبات",
+    description: "مشاركة عربية مميزة.",
+    alt: "أمنية أحمد سمرة في بطولة المنتخبات العربية",
+    imageTitle: "أمنية أحمد سمرة - بطولة المنتخبات",
   },
   {
     image: "/images/gallery/omnia-ahmed-samra-after-winning-tennis-double-tournament.webp",
@@ -67,12 +143,29 @@ const slides = [
     alt: "أمنية أحمد سمرة أثناء مراسم التتويج",
     imageTitle: "أمنية أحمد سمرة - التتويج",
   },
+
+  {
+    image: "/images/gallery/omnia-samra-egypt-tennis-team19.webp",
+    title: "منتخب مصر",
+    description: "تمثيل مصر بكل فخر.",
+    alt: "أمنية أحمد سمرة تمثل مصر في البطولة العربية",
+    imageTitle: "أمنية أحمد سمرة - تمثيل مصر",
+  },
   {
     image: "/images/gallery/omnia-samra-with-tennis-partner-retal-saber.webp",
     title: "رحلة التنس",
     description: "ذكريات من الملاعب.",
     alt: "أمنية أحمد سمرة وصديقتها ريتال صابر لاعبة الأهلي",
     imageTitle: "أمنية أحمد سمرة - رحلة التنس",
+  },
+
+
+  {
+    image: "/images/gallery/omnia-samra-egypt-tennis-team1.webp",
+    title: "رحلة النجاح",
+    description: "لقطات لا تُنسى مع المنتخب.",
+    alt: "أمنية أحمد سمرة مع منتخب مصر للتنس",
+    imageTitle: "أمنية أحمد سمرة - رحلة النجاح",
   },
   {
     image: "/images/gallery/omnia-samra-with-lyla-abdelrazek.webp",
@@ -82,12 +175,106 @@ const slides = [
     imageTitle: "أمنية أحمد سمرة - منافسات قوية",
   },
 
+
+  {
+    image: "/images/gallery/omnia-samra-egypt-tennis-team15.webp",
+    title: "أجواء البطولة",
+    description: "من قلب المنافسات العربية.",
+    alt: "أمنية أحمد سمرة في منافسات البطولة العربية",
+    imageTitle: "أمنية أحمد سمرة - أجواء البطولة",
+  },
   {
     image: "/images/gallery/omnia-samra-1st-tennis-champion-egypt.webp",
     title: "بطلة مصر",
     description: "لقطة من إحدى البطولات.",
     alt: "أمنية أحمد سمرة بطلة مصر في إحدى بطولات التنس",
     imageTitle: "أمنية أحمد سمرة - بطلة مصر",
+  },
+
+  
+  {
+    image: "/images/gallery/omnia-samra-egypt-tennis-team22.webp",
+    title: "منتخب مصر",
+    description: "لقطات مميزة مع زميلات المنتخب.",
+    alt: "أمنية أحمد سمرة مع منتخب مصر",
+    imageTitle: "أمنية أحمد سمرة - منتخب مصر",
+  },
+  {
+    image: "/images/gallery/omnia-samra-egypt-tennis-team5.webp",
+    title: "ذكريات رائعة",
+    description: "لحظات ستظل خالدة.",
+    alt: "أمنية أحمد سمرة خلال البطولة العربية",
+    imageTitle: "أمنية أحمد سمرة - ذكريات رائعة",
+  },
+  {
+    image: "/images/gallery/omnia-samra-egypt-tennis-team12.webp",
+    title: "بطولة عربية",
+    description: "منافسات قوية وتمثيل مشرف.",
+    alt: "أمنية أحمد سمرة في البطولة العربية للمنتخبات",
+    imageTitle: "أمنية أحمد سمرة - بطولة عربية",
+  },
+  {
+    image: "/images/gallery/omnia-samra-egypt-tennis-team9.webp",
+    title: "منتخب مصر",
+    description: "رحلة مليئة بالفخر.",
+    alt: "أمنية أحمد سمرة لاعبة منتخب مصر",
+    imageTitle: "أمنية أحمد سمرة - لاعبة منتخب مصر",
+  },
+  {
+    image: "/images/gallery/omnia-samra-egypt-tennis-team20.webp",
+    title: "لحظات مميزة",
+    description: "أثناء البطولة العربية.",
+    alt: "أمنية أحمد سمرة في البطولة العربية للتنس",
+    imageTitle: "أمنية أحمد سمرة - لحظات مميزة",
+  },
+  {
+    image: "/images/gallery/omnia-samra-egypt-tennis-team7.webp",
+    title: "البطولة العربية",
+    description: "منافسات على أعلى مستوى.",
+    alt: "أمنية أحمد سمرة في البطولة العربية",
+    imageTitle: "أمنية أحمد سمرة - البطولة العربية",
+  },
+  {
+    image: "/images/gallery/omnia-samra-egypt-tennis-team16.webp",
+    title: "فخر مصر",
+    description: "تمثيل منتخب مصر في البطولة.",
+    alt: "أمنية أحمد سمرة تمثل منتخب مصر",
+    imageTitle: "أمنية أحمد سمرة - فخر مصر",
+  },
+  {
+    image: "/images/gallery/omnia-samra-egypt-tennis-team23.webp",
+    title: "رحلة المنتخب",
+    description: "ذكريات جميلة مع الفريق.",
+    alt: "أمنية أحمد سمرة مع منتخب مصر للتنس",
+    imageTitle: "أمنية أحمد سمرة - رحلة المنتخب",
+  },
+  {
+    image: "/images/gallery/omnia-samra-egypt-tennis-team3.webp",
+    title: "منافسات قوية",
+    description: "أجواء البطولة العربية.",
+    alt: "أمنية أحمد سمرة خلال المنافسات",
+    imageTitle: "أمنية أحمد سمرة - منافسات قوية",
+  },
+  {
+    image: "/images/gallery/omnia-samra-egypt-tennis-team14.webp",
+    title: "منتخب مصر",
+    description: "لقطات من رحلة البطولة.",
+    alt: "أمنية أحمد سمرة مع المنتخب الوطني",
+    imageTitle: "أمنية أحمد سمرة - المنتخب الوطني",
+  },
+  {
+    image: "/images/gallery/omnia-samra-egypt-tennis-team11.webp",
+    title: "إنجاز المنتخب",
+    description: "أحد أجمل أيام البطولة العربية.",
+    alt: "أمنية أحمد سمرة في البطولة العربية للمنتخبات",
+    imageTitle: "أمنية أحمد سمرة - إنجاز المنتخب",
+  },
+  {
+    image: "/images/gallery/omnia-samra-egypt-tennis-team18.webp",
+    title: "ذكريات البطولة",
+    description: "رحلة لا تُنسى مع منتخب مصر.",
+    alt: "أمنية أحمد سمرة مع منتخب مصر في البطولة العربية",
+    imageTitle: "أمنية أحمد سمرة - ذكريات البطولة",
   },
 ];
 
