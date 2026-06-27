@@ -1,31 +1,34 @@
 import { client } from "@/lib/sanity/client";
 import { newsQuery } from "@/lib/sanity/queries";
 
+import FeaturedNews from "@/components/news/FeaturedNews";
+import NewsGrid from "@/components/news/NewsGrid";
+
 export default async function NewsPage() {
   const news = await client.fetch(newsQuery);
 
+  if (!news?.length) {
+    return (
+      <main className="mx-auto max-w-7xl px-6 py-24 text-center">
+        <h1 className="text-4xl font-bold text-white">
+          لا توجد أخبار حالياً
+        </h1>
+      </main>
+    );
+  }
+
+  const featured = news[0];
+  const rest = news.slice(1);
+
   return (
-    <main className="max-w-5xl mx-auto p-8">
-      <h1 className="text-4xl font-bold mb-8">
-        News
-      </h1>
+    <main className="mx-auto max-w-7xl px-6 py-24">
 
-      <div className="space-y-6">
-        {news.map((item: any) => (
-          <div
-            key={item._id}
-            className="border rounded-xl p-6"
-          >
-            <h2 className="text-2xl font-bold">
-              {item.title}
-            </h2>
+      <FeaturedNews news={featured} />
 
-            <p>{item.excerpt}</p>
+      {rest.length > 0 && (
+        <NewsGrid news={rest} />
+      )}
 
-            <p>{item.publishedDate}</p>
-          </div>
-        ))}
-      </div>
     </main>
   );
 }
