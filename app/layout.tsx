@@ -1,3 +1,4 @@
+import PersonSchema from "@/components/PersonSchema";
 import { GoogleTagManager } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import { Cairo } from "next/font/google";
@@ -94,13 +95,16 @@ export default function RootLayout({
       className={`${cairo.variable} h-full antialiased`}
     >
       <body
-        className={`${cairo.className} min-h-full flex flex-col bg-black text-white`}
-      >
-        <GoogleTagManager gtmId="GTM-N76WPPPQ" />
+  className={`${cairo.className} min-h-full flex flex-col bg-black text-white`}
+>
+  <GoogleTagManager gtmId="GTM-N76WPPPQ" />
 
-        <Navbar />
-        {children}
-      </body>
+  <PersonSchema />
+
+  <Navbar />
+
+  {children}
+</body>
     </html>
   );
 }
