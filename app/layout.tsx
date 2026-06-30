@@ -1,3 +1,4 @@
+import { GoogleTagManager } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import { Cairo } from "next/font/google";
 import Navbar from "@/components/Navbar";
@@ -49,7 +50,6 @@ export const metadata: Metadata = {
     siteName: "Omnia Samra",
     locale: "ar_EG",
     type: "website",
-
     images: [
       {
         url: "/og-image.webp",
@@ -96,6 +96,8 @@ export default function RootLayout({
       <body
         className={`${cairo.className} min-h-full flex flex-col bg-black text-white`}
       >
+        <GoogleTagManager gtmId="GTM-N76WPPPQ" />
+
         <Navbar />
         {children}
       </body>
