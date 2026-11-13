@@ -92,8 +92,7 @@ export default function Sponsors() {
                 />
               </div>
 
-              {/* Desktop Only */}
-              <h3 className="mt-4 hidden text-lg font-bold text-white lg:block">
+              <h3 className="mt-3 text-sm font-bold text-white lg:mt-4 lg:text-lg">
                 {sponsor.name}
               </h3>
 

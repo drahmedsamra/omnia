@@ -1,7 +1,7 @@
 
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -14,6 +14,25 @@ export default function Navbar() {
     { name: "الصور", href: "#gallery" },
     { name: "المدرب", href: "#coach" },
   ];
+
+  // Close on Escape key press
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setOpen(false);
+      }
+    };
+    if (open) {
+      window.addEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "";
+    };
+  }, [open]);
 
   return (
     <>
@@ -60,8 +79,9 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setOpen(true)}
-            className="md:hidden text-white"
-            aria-label="Open Menu"
+            className="md:hidden text-white p-2"
+            aria-label="فتح القائمة"
+            aria-expanded={open}
           >
             <svg
               width="28"
@@ -79,14 +99,17 @@ export default function Navbar() {
 
       {/* Mobile Overlay */}
       <div
+        onClick={() => setOpen(false)}
         className={`fixed inset-0 z-[60] transition-all duration-300 ${
           open
-            ? "pointer-events-auto bg-black/80 opacity-100"
+            ? "pointer-events-auto bg-black/80 opacity-100 backdrop-blur-sm"
             : "pointer-events-none opacity-0"
         }`}
+        aria-hidden={!open}
       >
         {/* Drawer */}
         <div
+          onClick={(e) => e.stopPropagation()}
           className={`absolute right-0 top-0 h-full w-72 border-l border-red-900/20 bg-black transition-transform duration-300 ${
             open ? "translate-x-0" : "translate-x-full"
           }`}
@@ -105,7 +128,8 @@ export default function Navbar() {
 
             <button
               onClick={() => setOpen(false)}
-              className="text-3xl text-white"
+              className="text-3xl text-white hover:text-red-500 transition-colors p-2"
+              aria-label="إغلاق القائمة"
             >
               ×
             </button>

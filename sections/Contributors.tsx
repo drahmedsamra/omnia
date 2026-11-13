@@ -50,31 +50,28 @@ export default function Contributors() {
           <div className="mx-auto mt-8 h-px w-40 bg-gradient-to-r from-transparent via-red-500/40 to-transparent" />
         </div>
 
-       {/* Main Contributors */}
-<div className="grid gap-6 md:grid-cols-2">
+        {/* Main Contributors */}
+        <div className="mx-auto max-w-2xl">
+          {/* Mother */}
+          <div className="rounded-3xl border border-red-900/30 bg-gradient-to-b from-white/[0.05] to-white/[0.02] p-8 text-center backdrop-blur-md shadow-2xl transition hover:border-red-500/40">
+            <div className="mb-4 text-5xl">❤️</div>
 
-{/* Mother */}
-<div className="rounded-3xl border border-red-900/20 bg-white/[0.03] p-8 backdrop-blur-md">
-  <div className="mb-4 text-5xl">❤️</div>
+            <h3 className="text-3xl font-black text-white">
+              والدة أمنية
+            </h3>
 
-  <h3 className="text-3xl font-black text-white">
-    والدة أمنية
-  </h3>
+            <p className="mt-2 text-lg font-semibold text-red-500">
+              الداعم الأكبر في الرحلة
+            </p>
 
-  <p className="mt-2 text-red-500">
-    الداعم الأكبر في الرحلة
-  </p>
-
-  <p className="mt-6 leading-8 text-gray-400">
-    كانت ولا تزال الداعم الأكبر في رحلة أمنية الرياضية، من خلال
-    الاهتمام اليومي بالتفاصيل، والحرص على التغذية السليمة والراحة
-    والانضباط، وتوفير البيئة المناسبة التي تساعد على الاستمرار
-    والتطور وتحقيق النجاحات داخل وخارج الملعب.
-  </p>
-</div>
-
-
-</div>
+            <p className="mt-6 leading-8 text-gray-300 md:text-lg">
+              كانت ولا تزال الداعم الأكبر في رحلة أمنية الرياضية، من خلال
+              الاهتمام اليومي بالتفاصيل، والحرص على التغذية السليمة والراحة
+              والانضباط، وتوفير البيئة المناسبة التي تساعد على الاستمرار
+              والتطور وتحقيق النجاحات داخل وخارج الملعب.
+            </p>
+          </div>
+        </div>
 
         {/* Tennis Coaches */}
         <div className="mt-16">

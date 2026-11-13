@@ -81,7 +81,7 @@ export default function About() {
               {/* Quote */}
               <div className="mt-12 border-r-4 border-red-500 pr-6">
                 <p className="text-xl font-semibold italic text-white md:text-2xl">
-                  "كل بطولة هي خطوة جديدة نحو حلم أكبر."
+                  &ldquo;كل بطولة هي خطوة جديدة نحو حلم أكبر.&rdquo;
                 </p>
 
                 <p className="mt-3 text-sm text-gray-500">

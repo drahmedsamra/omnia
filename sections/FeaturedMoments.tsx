@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef, useCallback } from "react";
 import Image from "next/image";
 
 const slides = [
@@ -41,7 +41,7 @@ const slides = [
     imageTitle: "أمنية أحمد سمرة - روح الفريق",
   },
   {
-    image: "/images/gallery/omnia-ahmed-samra-tennis-ahly-team.webp.webp",
+    image: "/images/gallery/omnia-ahmed-samra-tennis-ahly-team.webp",
     title: "فريق الأهلي",
     description: "مع فريق النادي الأهلي.",
     alt: "أمنية أحمد سمرة مع فريق النادي الأهلي للتنس",
@@ -280,21 +280,65 @@ const slides = [
 
 export default function FeaturedMoments() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const touchStartX = useRef<number | null>(null);
+  const touchEndX = useRef<number | null>(null);
+  const thumbContainerRef = useRef<HTMLDivElement>(null);
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
+  }, []);
 
-  const prevSlide = () => {
+  const prevSlide = useCallback(() => {
     setCurrentSlide((prev) =>
       prev === 0 ? slides.length - 1 : prev - 1
     );
-  };
+  }, []);
 
+  // Autoplay with pause on hover/interaction
   useEffect(() => {
+    if (isPaused) return;
     const timer = setInterval(nextSlide, 5000);
     return () => clearInterval(timer);
-  }, []);
+  }, [nextSlide, isPaused]);
+
+  // Auto-scroll active thumbnail into view
+  useEffect(() => {
+    if (!thumbContainerRef.current) return;
+    const activeEl = thumbContainerRef.current.children[currentSlide] as HTMLElement;
+    if (activeEl) {
+      activeEl.scrollIntoView({
+        behavior: "smooth",
+        inline: "center",
+        block: "nearest",
+      });
+    }
+  }, [currentSlide]);
+
+  // Touch Swipe Handlers for mobile
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.targetTouches[0].clientX;
+    touchEndX.current = null;
+    setIsPaused(true);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.targetTouches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    setIsPaused(false);
+    if (!touchStartX.current || !touchEndX.current) return;
+    const distance = touchStartX.current - touchEndX.current;
+    const minSwipeDistance = 50;
+
+    // RTL aware: In RTL, swiping left to right or right to left
+    if (distance > minSwipeDistance) {
+      nextSlide();
+    } else if (distance < -minSwipeDistance) {
+      prevSlide();
+    }
+  };
 
   return (
     <section
@@ -304,10 +348,8 @@ export default function FeaturedMoments() {
       <div className="absolute left-1/2 top-0 h-[400px] w-[400px] -translate-x-1/2 bg-red-900/10 blur-[150px]" />
 
       <div className="mx-auto max-w-7xl px-6">
-
         <div className="mb-16 text-center">
-
-          <span className="text-sm uppercase tracking-[0.4em] text-red-500">
+          <span className="text-sm uppercase tracking-[0.4em] text-red-500 font-semibold">
             FEATURED MOMENTS
           </span>
 
@@ -318,30 +360,36 @@ export default function FeaturedMoments() {
           <p className="mx-auto mt-6 max-w-2xl text-gray-400">
             مجموعة من أهم البطولات والإنجازات في مسيرة أمنية أحمد سمرة.
           </p>
-
         </div>
 
         <div className="relative mx-auto max-w-6xl">
+          {/* Main Slide Card */}
+          <div
+            className="group relative h-[420px] overflow-hidden rounded-3xl border border-red-900/30 bg-zinc-950 md:h-[650px]"
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+          >
+            <Image
+              src={slides[currentSlide].image}
+              alt={slides[currentSlide].alt}
+              title={slides[currentSlide].imageTitle}
+              fill
+              priority={currentSlide === 0}
+              quality={80}
+              sizes="(max-width:768px) 100vw, 1200px"
+              className="object-contain transition-opacity duration-500"
+            />
 
-          <div className="relative h-[420px] overflow-hidden rounded-3xl border border-red-900/30 bg-zinc-950 md:h-[650px]">
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent pointer-events-none" />
 
-
-
-<Image
-src={slides[currentSlide].image}
-alt={slides[currentSlide].alt}
-title={slides[currentSlide].imageTitle}
-fill
-priority={currentSlide === 0}
-quality={80}
-sizes="(max-width:768px) 100vw, 1200px"
-className="object-contain"
-/>
-
-
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
-
-            <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
+            {/* Slide Information */}
+            <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10 pointer-events-none">
+              <span className="inline-block rounded-full bg-red-600/80 px-3 py-1 text-xs font-bold text-white mb-3 backdrop-blur">
+                {currentSlide + 1} / {slides.length}
+              </span>
 
               <h3 className="text-2xl font-black text-white md:text-5xl">
                 {slides[currentSlide].title}
@@ -350,71 +398,80 @@ className="object-contain"
               <p className="mt-3 text-sm text-gray-300 md:text-lg">
                 {slides[currentSlide].description}
               </p>
-
             </div>
 
+            {/* Navigation Arrows */}
             <button
               onClick={prevSlide}
-              className="absolute left-4 top-1/2 z-20 -translate-y-1/2 text-5xl text-white/60 transition hover:text-white"
+              aria-label="الصورة السابقة"
+              className="absolute left-4 top-1/2 z-20 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white backdrop-blur transition-all hover:scale-110 hover:border-red-500 hover:bg-red-600 focus:outline-none"
             >
               ❮
             </button>
 
             <button
               onClick={nextSlide}
-              className="absolute right-4 top-1/2 z-20 -translate-y-1/2 text-5xl text-white/60 transition hover:text-white"
+              aria-label="الصورة التالية"
+              className="absolute right-4 top-1/2 z-20 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white backdrop-blur transition-all hover:scale-110 hover:border-red-500 hover:bg-red-600 focus:outline-none"
             >
               ❯
             </button>
-
           </div>
 
-          <div className="mt-8 flex justify-center gap-3">
+          {/* Progress Bar & Counter */}
+          <div className="mt-6 flex items-center justify-between gap-4 px-2">
+            <span className="text-xs font-mono text-gray-400">
+              {String(currentSlide + 1).padStart(2, "0")}
+            </span>
 
-            {slides.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                aria-label={`slide-${index + 1}`}
-                className={`h-3 rounded-full transition ${
-                  currentSlide === index
-                    ? "w-8 bg-red-500"
-                    : "w-3 bg-zinc-700"
-                }`}
+            <div className="relative h-1.5 flex-1 overflow-hidden rounded-full bg-zinc-800">
+              <div
+                className="h-full bg-red-600 transition-all duration-300 rounded-full"
+                style={{
+                  width: `${((currentSlide + 1) / slides.length) * 100}%`,
+                }}
               />
-            ))}
+            </div>
 
+            <span className="text-xs font-mono text-gray-400">
+              {String(slides.length).padStart(2, "0")}
+            </span>
           </div>
 
-          <div className="mt-10 hidden grid-cols-6 gap-4 md:grid">
-
+          {/* Interactive Thumbnails Carousel Strip */}
+          <div
+            ref={thumbContainerRef}
+            className="mt-6 flex gap-3 overflow-x-auto pb-4 pt-1 scroll-smooth"
+            style={{
+              scrollbarWidth: "none",
+              msOverflowStyle: "none",
+            }}
+          >
             {slides.map((slide, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
-                className={`relative h-24 overflow-hidden rounded-xl border transition ${
+                aria-label={`عرض الصورة ${index + 1}`}
+                className={`group relative h-20 w-28 shrink-0 overflow-hidden rounded-xl border-2 transition-all duration-200 focus:outline-none ${
                   currentSlide === index
-                    ? "scale-105 border-red-500"
-                    : "border-zinc-800"
+                    ? "scale-105 border-red-500 shadow-[0_0_15px_rgba(239,68,68,0.5)] opacity-100"
+                    : "border-zinc-800 opacity-50 hover:opacity-100 hover:border-zinc-600"
                 }`}
               >
                 <Image
-  src={slide.image}
-  alt={slide.alt}
-  title={slide.imageTitle}
-  fill
-  loading="lazy"
-  quality={60}
-  sizes="120px"
-  className="object-cover"
-/>
+                  src={slide.image}
+                  alt={slide.alt}
+                  title={slide.imageTitle}
+                  fill
+                  loading="lazy"
+                  quality={60}
+                  sizes="120px"
+                  className="object-cover transition-transform duration-300 group-hover:scale-110"
+                />
               </button>
             ))}
-
           </div>
-
         </div>
-
       </div>
     </section>
   );
