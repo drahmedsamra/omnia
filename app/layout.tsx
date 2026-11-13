@@ -92,7 +92,7 @@ export default function RootLayout({
     <html
       lang="ar"
       dir="rtl"
-      className={`${cairo.variable} h-full antialiased`}
+      className={`${cairo.variable} h-full antialiased scroll-smooth scroll-pt-16`}
     >
       <body
   className={`${cairo.className} min-h-full flex flex-col bg-black text-white`}

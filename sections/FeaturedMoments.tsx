@@ -302,17 +302,27 @@ export default function FeaturedMoments() {
     return () => clearInterval(timer);
   }, [nextSlide, isPaused]);
 
-  // Auto-scroll active thumbnail into view
+  const isFirstMount = useRef(true);
+
+  // Auto-scroll active thumbnail inside the container ONLY (without affecting page scroll)
   useEffect(() => {
-    if (!thumbContainerRef.current) return;
-    const activeEl = thumbContainerRef.current.children[currentSlide] as HTMLElement;
-    if (activeEl) {
-      activeEl.scrollIntoView({
-        behavior: "smooth",
-        inline: "center",
-        block: "nearest",
-      });
+    if (isFirstMount.current) {
+      isFirstMount.current = false;
+      return;
     }
+
+    const container = thumbContainerRef.current;
+    if (!container) return;
+    const activeEl = container.children[currentSlide] as HTMLElement;
+    if (!activeEl) return;
+
+    const targetLeft =
+      activeEl.offsetLeft - container.clientWidth / 2 + activeEl.offsetWidth / 2;
+
+    container.scrollTo({
+      left: targetLeft,
+      behavior: "smooth",
+    });
   }, [currentSlide]);
 
   // Touch Swipe Handlers for mobile
@@ -343,7 +353,7 @@ export default function FeaturedMoments() {
   return (
     <section
       id="gallery"
-      className="relative overflow-hidden bg-black py-16"
+      className="relative overflow-hidden bg-black py-16 scroll-mt-16"
     >
       <div className="absolute left-1/2 top-0 h-[400px] w-[400px] -translate-x-1/2 bg-red-900/10 blur-[150px]" />
 
